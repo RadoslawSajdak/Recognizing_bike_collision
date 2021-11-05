@@ -1,0 +1,3 @@
+[submodule "pebblebee-found11-fw"]
+	path = pebblebee-found11-fw
+	url = git@github.com:PebbleBee/pebblebee-found11-fw.git
