@@ -75,8 +75,6 @@ void main(void)
     /*----- Accelerometer -----*/
     #ifdef  COMPONENT_TK_ACCELEROMETER
     if( 0 != (error = tk_accel_init() )) LOG_ERR("Can't initiate Accelerometer. Code: %d", error);
-    LOG_INF("Starting self-test for accel");
-    if ( 0 != ( error = tk_accel_self_test() )) LOG_ERR("Self test failed");
     #endif
 
     LOG_INF("Device init finished");
