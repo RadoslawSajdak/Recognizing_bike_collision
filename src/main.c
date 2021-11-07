@@ -77,11 +77,16 @@ void main(void)
     if( 0 != (error = tk_accel_init() )) LOG_ERR("Can't initiate Accelerometer. Code: %d", error);
     #endif
 
+    k_sleep(K_SECONDS(10));
+    tk_uart_deinit();
     LOG_INF("Device init finished");
 
-    while (1)
+    k_sleep(K_SECONDS(2));
+ 	pm_power_state_force((struct pm_state_info){PM_STATE_SOFT_OFF, 0, 0});
+    
+    while(1)
     {
-        k_msleep(100U);
+        k_msleep(100);
     }
 }
 
