@@ -79,6 +79,7 @@ void main(void)
     if ( 0 != ( error = tk_accel_self_test() )) LOG_ERR("Self test failed");
     #endif
 
+    tk_acccel_fsm_wake_up_setup();
     LOG_INF("Device init finished");
 
     while (1)
