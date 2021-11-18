@@ -86,8 +86,14 @@ void main(void)
     /*----- GPS -----*/
     #ifdef  COMPONENT_TK_GPS
 
-        tk_mt3333_power(false);
+    tk_mt3333_power(false);
 
+    #endif
+
+    /*----- LTE -----*/
+    #ifdef COMPONENT_TK_LTE
+
+    tk_lte_init();
     #endif
 
 
