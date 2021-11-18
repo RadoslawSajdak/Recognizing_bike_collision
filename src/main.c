@@ -29,6 +29,9 @@
 #ifdef  COMPONENT_TK_LTE
     #include "toolkits/tk_lte.h"
 #endif
+#ifdef  COMPONENT_TK_GPS
+    #include "toolkits/tk_mt3333.h"
+#endif
 
 
 
@@ -77,9 +80,17 @@ void main(void)
     if( 0 != (error = tk_accel_init() )) LOG_ERR("Can't initiate Accelerometer. Code: %d", error);
     LOG_INF("Starting self-test for accel");
     if ( 0 != ( error = tk_accel_self_test() )) LOG_ERR("Self test failed");
+    tk_acccel_fsm_wake_up_setup();
     #endif
 
-    tk_acccel_fsm_wake_up_setup();
+    /*----- GPS -----*/
+    #ifdef  COMPONENT_TK_GPS
+
+        tk_mt3333_power(false);
+
+    #endif
+
+
     LOG_INF("Device init finished");
 
     while (1)
