@@ -92,8 +92,8 @@ void main(void)
 
     /*----- LTE -----*/
     #ifdef COMPONENT_TK_LTE
-
     tk_lte_init();
+    tk_lte_register();
     #endif
 
 
