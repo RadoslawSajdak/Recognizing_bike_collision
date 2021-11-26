@@ -30,7 +30,7 @@
     #include "toolkits/tk_lte.h"
 #endif
 #ifdef  COMPONENT_TK_GPS
-    #include "toolkits/tk_mt3333.h"
+    #include "toolkits/tk_gps.h"
 #endif
 
 
@@ -86,7 +86,7 @@ void main(void)
     /*----- GPS -----*/
     #ifdef  COMPONENT_TK_GPS
 
-    tk_mt3333_power(false);
+    tk_gps_get_data();
 
     #endif
 
