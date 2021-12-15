@@ -44,7 +44,7 @@ for line in lines:
     raw_data[0].append(float(res[2])/1000)  # Gyro X
     raw_data[1].append(float(res[1])/1000)  # Gyro Y
     raw_data[2].append(float(res[0])/1000)  # Gyro Z
-    raw_data[3].append(float(res[5])/1000)  # Accel X
+    raw_data[3].append(float(res[5])/-1000)  # Accel X
     raw_data[4].append(float(res[4])/1000)  # Accel Y
     raw_data[5].append(float(res[3])/1000)  # Accel Z
 
@@ -52,7 +52,8 @@ filtered_data = []
 titles = ["Gyroscope X", "Gyroscope Y", "Gyroscope Z", "Accelerometer X", "Accelerometer Y", "Accelerometer Z"]
 y_labels = ["dps", "dps", "dps", "g[m/s^2]", "g[m/s^2]", "g[m/s^2]"]
 x_labels = ["t[s]", "t[s]", "t[s]", "t[s]", "t[s]", "t[s]"] 
-
+plt.figure(figsize=(10,7))
+plt.suptitle("Upadek ze stromego zbocza")
 for axis, n, tit, y_l, x_l in zip(raw_data[3:], range(len(raw_data[3:])), titles[3:], y_labels[3:], x_labels[3:]):
     filtered_data.append(butter_lowpass_filter(axis[CUT_FRONT:], cutoff, fs, order))
     t = np.arange(len(axis[CUT_FRONT:]))/416
