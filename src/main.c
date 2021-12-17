@@ -17,9 +17,6 @@
 #ifdef  COMPONENT_TK_BUZZER
     #include "toolkits/tk_buzzer.h"
 #endif
-#ifdef  COMPONENT_TK_LED
-    #include "toolkits/tk_led.h"
-#endif
 #ifdef COMPONENT_TK_ACCELEROMETER
     #include "toolkits/tk_accel.h"
 #endif
@@ -33,13 +30,20 @@
     #include "toolkits/tk_gps.h"
 #endif
 
-
+#define ALARM_STOP_TIMEOUT_SEC              60U
+#define ALARM_RESEND_PERIOD_MINUTES         5U
 
 LOG_MODULE_REGISTER(main);
+K_TIMER_DEFINE(g_accel_timer, accel_timer_callback, NULL);
+K_TIMER_DEFINE(g_periodically_timer, accel_timer_callback, NULL);
+
+static bool g_event_interrupted = false;
+static bool g_send_periodically = false;
 
 void main(void)
 {
     int error;
+
     /*----- I2C -----*/
     #ifdef  COMPONENT_TK_I2C
         if( 0 != tk_i2c_init()) LOG_ERR("Can't initiate I2C");
@@ -54,7 +58,7 @@ void main(void)
     if (0 != tk_uart_init()) LOG_ERR("Couldn't init uart1");
     #endif
     #ifdef  COMPONENT_TK_LTE
-    tk_lte_thread_start();
+    tk_lte_init_setup();
     #endif
 
     /*----- Buzzer -----*/
@@ -66,37 +70,48 @@ void main(void)
     LOG_INF("Buzzer func is done!");
     #endif
 
-    /*----- LEDs -----*/
-    #ifdef  COMPONENT_TK_LED
-    if( 0 != tk_led_init() ) LOG_ERR("Can't initiate LEDs");
-    if( 0 != (error = tk_led_test()) ) LOG_ERR("Led PWM test failed... Code: %d", error);
-    if( 0 != (error = tk_led_set_RGB(255,0,128,5000)) ) LOG_ERR("Set RGB error: %d", error);
-    if( 0 != (error = tk_led_set_RGB(255,0,0,5000)) ) LOG_ERR("Set RGB error: %d", error);
-    LOG_INF("LED Init success");
+    /*----- GPS -----*/
+    #ifdef  COMPONENT_TK_GPS
+    tk_gps_power(false);    // Just to be sure if GPS is off
     #endif
 
     /*----- Accelerometer -----*/
     #ifdef  COMPONENT_TK_ACCELEROMETER
     if( 0 != (error = tk_accel_init() )) LOG_ERR("Can't initiate Accelerometer. Code: %d", error);
-    LOG_INF("Starting self-test for accel");
-    if ( 0 != ( error = tk_accel_self_test() )) LOG_ERR("Self test failed");
-    tk_acccel_fsm_wake_up_setup();
-    #endif
-
-    /*----- GPS -----*/
-    #ifdef  COMPONENT_TK_GPS
-
-    tk_gps_get_data();
-
     #endif
 
     LOG_INF("Device init finished");
 
     while (1)
     {
+        if( tk_accel_get_event_status() &&  !g_event_interrupted)
+        {
+            k_timer_start(&g_accel_timer, K_SECONDS(ALARM_STOP_TIMEOUT_SEC), K_NO_WAIT);
+        }
+        else if( (tk_accel_get_event_status() || g_send_periodically) && g_event_interrupted)
+        {
+            tk_gps_get_data(true); // Leave GPS on to hold fix
+            // Here i could set up timer for timeout, but we must get this fix so i don't
+            while( !tk_gps_get_data_ready()) k_msleep(100);
+            tk_lte_thread_start();
+
+            // Resetup device for auto wakeup periodically.
+            g_send_periodically = true;
+            g_event_interrupted = false;
+            k_timer_start(&g_periodically_timer, K_SECONDS(60 * ALARM_RESEND_PERIOD_MINUTES), K_NO_WAIT);
+        }
         k_msleep(100U);
     }
 }
+
+static void accel_timer_callback(struct k_timer *timer_id)
+{
+    g_event_interrupted = true;
+    k_timer_stop(timer_id);
+
+    return;    
+}
+
 
 void pm_init(void)
 {
