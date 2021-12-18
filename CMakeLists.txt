@@ -11,11 +11,13 @@ project(low_power_uart)
 
 FILE(GLOB app_sources src/*.c)
 FILE(GLOB toolkits src/toolkits/*.c)
+FILE(GLOB bluetooth pebblebee-found11-fw/src/app/*.c)
 
 # NORDIC SDK APP START
 target_sources(app PRIVATE
 	${app_sources}
 	${toolkits}
+	${bluetooth}
 
 )
 # NORDIC SDK APP END

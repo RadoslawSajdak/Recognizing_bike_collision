@@ -32,6 +32,10 @@
 #ifdef  COMPONENT_TK_BUTTON
     #include "toolkits/tk_button.h"
 #endif
+#ifdef COMPONENT_PB_SERVICE
+    #include "../pebblebee-found11-fw/src/app/app_pb_ble_service.h"
+    #include "../pebblebee-found11-fw/src/app/app_smp_ota.h"
+#endif
 
 #define ALARM_STOP_TIMEOUT_SEC              60U
 #define ALARM_RESEND_PERIOD_MINUTES         5U
@@ -62,6 +66,14 @@ void main(void)
 
     #ifdef  COMPONENT_TK_UART
     if (0 != tk_uart_init()) LOG_ERR("Couldn't init uart1");
+    #endif
+    #ifdef COMPONENT_PB_SERVICE
+    if (app_pb_ble_service_init() == 0)
+    {
+        app_smp_ota_init();
+        app_pb_ble_service_adv_start();
+        LOG_INF("WORKS 👌 🐝 !!!!!!!");
+    }
     #endif
     #ifdef  COMPONENT_TK_LTE
     tk_lte_init_setup();
