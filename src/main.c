@@ -29,16 +29,22 @@
 #ifdef  COMPONENT_TK_GPS
     #include "toolkits/tk_gps.h"
 #endif
+#ifdef  COMPONENT_TK_BUTTON
+    #include "toolkits/tk_button.h"
+#endif
 
 #define ALARM_STOP_TIMEOUT_SEC              60U
 #define ALARM_RESEND_PERIOD_MINUTES         5U
 
 LOG_MODULE_REGISTER(main);
+
+static void accel_timer_callback(struct k_timer *timer_id);
 K_TIMER_DEFINE(g_accel_timer, accel_timer_callback, NULL);
 K_TIMER_DEFINE(g_periodically_timer, accel_timer_callback, NULL);
 
-static bool g_event_interrupted = false;
-static bool g_send_periodically = false;
+static bool                     g_event_interrupted = false;
+static bool                     g_send_periodically = false;
+static bool                     g_device_running = false; // false = stopped, true = running
 
 void main(void)
 {
@@ -84,21 +90,57 @@ void main(void)
 
     while (1)
     {
-        if( tk_accel_get_event_status() &&  !g_event_interrupted)
+        if(g_button_events.long_press) //Switch device state
         {
-            k_timer_start(&g_accel_timer, K_SECONDS(ALARM_STOP_TIMEOUT_SEC), K_NO_WAIT);
+            if(g_device_running) // Turn everything off
+            {
+                k_timer_stop(&g_periodically_timer);
+                // TODO: Buzzer off
+                tk_gps_power(false);
+                tk_lte_power_off();
+                tk_accel_power(false);
+                g_device_running = false;
+            }
+            else
+            {
+                tk_accel_power(true);
+                g_device_running = true;
+            }
         }
-        else if( (tk_accel_get_event_status() || g_send_periodically) && g_event_interrupted)
+        else if(g_button_events.short_press)
         {
-            tk_gps_get_data(true); // Leave GPS on to hold fix
-            // Here i could set up timer for timeout, but we must get this fix so i don't
-            while( !tk_gps_get_data_ready()) k_msleep(100);
-            tk_lte_thread_start();
+            if(g_device_running)
+            {
+                k_timer_stop(&g_periodically_timer);
+                // TODO: Buzzer off
+                tk_gps_power(false);
+                tk_lte_power_off();
+                // Leave accel On, device is running
+            }
+            else
+            {
+                ;// Ignore, because the device is off    
+            }
+        }
+        else
+        {
+            if( tk_accel_get_event_status() &&  !g_event_interrupted)
+            {
+                k_timer_start(&g_accel_timer, K_SECONDS(ALARM_STOP_TIMEOUT_SEC), K_NO_WAIT);
+                // TODO: Buzzer on
+            }
+            else if( (tk_accel_get_event_status() || g_send_periodically) && g_event_interrupted)
+            {
+                tk_gps_get_data(true); // Leave GPS on to hold fix
+                // Here i could set up timer for timeout, but we must get this fix so i don't
+                while( !tk_gps_get_data_ready()) k_msleep(100);
+                tk_lte_thread_start();
 
-            // Resetup device for auto wakeup periodically.
-            g_send_periodically = true;
-            g_event_interrupted = false;
-            k_timer_start(&g_periodically_timer, K_SECONDS(60 * ALARM_RESEND_PERIOD_MINUTES), K_NO_WAIT);
+                // Resetup device for auto wakeup periodically.
+                g_send_periodically = true;
+                g_event_interrupted = false;
+                k_timer_start(&g_periodically_timer, K_SECONDS(60 * ALARM_RESEND_PERIOD_MINUTES), K_NO_WAIT);
+            }
         }
         k_msleep(100U);
     }
