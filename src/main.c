@@ -134,8 +134,7 @@ void main(void)
                 tk_gps_get_data(true); // Leave GPS on to hold fix
                 // Here i could set up timer for timeout, but we must get this fix so i don't
                 while( !tk_gps_get_data_ready()) k_msleep(100);
-                tk_lte_thread_start();
-
+                tk_lte_send_sms_location();
                 // Resetup device for auto wakeup periodically.
                 g_send_periodically = true;
                 g_event_interrupted = false;
