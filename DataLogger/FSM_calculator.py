@@ -7,7 +7,7 @@ def short_timer(miliseconds):
     max_time = (255 / SAMPLE_RATE) * 1000 # Maximum miliseconds
     if(miliseconds > max_time):
         return -1
-    return hex(int((miliseconds / 1000) * SAMPLE_RATE))
+    return ((miliseconds / 1000) * SAMPLE_RATE, hex(int((miliseconds / 1000) * SAMPLE_RATE)))
 
 def long_timer(miliseconds):
     max_time = (65535 / SAMPLE_RATE) * 1000 # Maximum miliseconds
@@ -16,9 +16,13 @@ def long_timer(miliseconds):
     return hex(int((miliseconds / 1000) * SAMPLE_RATE))
 
 def thresh_converter(mg):
-    return np.float16(mg).byteswap().tobytes().hex()
+    return np.float16(mg/1000).byteswap().tobytes().hex()
+
+def thresh_converter_60(mg):
+    return np.float16((  )).byteswap().tobytes().hex()
 
 if __name__ == "__main__":
-    print("Short timer samples: ", short_timer(2000))
-    print("Long timer samples: ", long_timer(2500))
-    print("Thresh mg: ", thresh_converter(-1.200))
+    print("Short timer samples: ", short_timer(200))
+    print("Long timer samples: ", long_timer(60000))
+    print("Thresh mg: ", thresh_converter(900))
+    print("Long counter: ", )
