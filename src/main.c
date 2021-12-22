@@ -43,14 +43,16 @@
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
 static void accel_timer_callback(struct k_timer *timer_id);
+static void long_timer_callback(struct k_timer *timer_id);
 K_TIMER_DEFINE(g_accel_timer, accel_timer_callback, NULL);
 K_TIMER_DEFINE(g_gps_timeout_timer, accel_timer_callback, NULL);
-K_TIMER_DEFINE(g_periodically_timer, accel_timer_callback, NULL);
+K_TIMER_DEFINE(g_periodically_timer, long_timer_callback, NULL);
 
 static bool                     g_event_interrupted = false;
 static bool                     g_send_periodically = false;
 static bool                     g_device_running = false; // false = stopped, true = running
 static bool                     g_timer_started = false;
+static bool                     g_long_timer_up = false;
 
 void clear_flags(void);
 
@@ -165,7 +167,7 @@ void main(void)
                 k_timer_start(&g_accel_timer, K_SECONDS(ALARM_STOP_TIMEOUT_SEC), K_NO_WAIT);
                 // TODO: Buzzer on
             }
-            else if( g_event_interrupted || g_send_periodically)
+            else if( g_event_interrupted || (g_send_periodically && g_long_timer_up))
             {
                 tk_gps_get_data(true); // Leave GPS on to hold fix
                 while( !tk_gps_get_data_ready()  && !g_button_events.long_press && !g_button_events.short_press) 
@@ -178,6 +180,7 @@ void main(void)
                     // Resetup device for auto wakeup periodically.
                     g_send_periodically = true;
                     g_event_interrupted = false;
+                    g_long_timer_up = false;
                     k_timer_start(&g_periodically_timer, K_SECONDS(60 * ALARM_RESEND_PERIOD_MINUTES), K_NO_WAIT);
                 }
             }
@@ -201,6 +204,16 @@ static void accel_timer_callback(struct k_timer *timer_id)
 {
     g_event_interrupted = true;
     g_timer_started = false;
+    k_timer_stop(timer_id);
+
+    return;    
+}
+
+static void long_timer_callback(struct k_timer *timer_id)
+{
+    g_event_interrupted = true;
+    g_timer_started = false;
+    g_long_timer_up = true;
     k_timer_stop(timer_id);
 
     return;    
