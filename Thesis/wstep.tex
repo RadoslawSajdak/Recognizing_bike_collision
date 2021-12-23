@@ -49,7 +49,10 @@ Układ ten, nie różni się znacząco od MPU-6050. Zgodnie z dokumentacją, jes
 Ostatni z wybranych układów, był układem producenta ST. Jest on dedykowany do rozwiązań, o niskim zużyciu energii. Według dokumentacji, jego zużycie energii to 550$\mu$A.\cite{LSM6DSOX} Wartość ta, jest kilkukrotnie niższa, niż w przypadku MPU-6050. Co więcej, układ posiada tryb LowPower, w którym zużycie energii można ograniczyć do nawet 4$\mu$A. LSM6DSOX, posiada również 9kB FIFO, po którego napełnieniu, wystawiane jest przerwanie. Dodatkową zaletą, jest szesnaście programowalnych maszyn stanów. Pozwalają one na maksymalne ograniczanie zużycia energii, dzięki możliwości wyłączenia mikrokontrolera w trybie analizy danych. LSM6DSOX, do komunikacji wykorzystuje $I^{2}C$. Pozostałe jego parametry, są zbliżone do opisywanych wcześniej.
 
 \subsubsection{Wybór akcelerometru}
-\begin{center}
+Spośród trzech dostępnych układów, wybrany został LSM6DSOX. Jak pokazuje tabela \ref{tab:accelerometer}, układy te, są stosunkowo podobne. Decydującym elementem, okazały się być maszyny stanów, wbudowane w akcelerometr. Pozwoliły one znacząco ograniczyć zużycie energii całego układu oraz przyspieszyć proces tworzenia aplikacji.
+
+\begin{table}[h]
+\centering
 \begin{tabular}{|c | c | c | c|}
     \hline
      & MPU-6050 & LSM9DS1 & LSM6DSOX \\
@@ -63,7 +66,9 @@ Ostatni z wybranych układów, był układem producenta ST. Jest on dedykowany d
     Zakres pracy & 2-16g & 2-16g & 2-16g\\
     \hline
 \end{tabular}
-\end{center}
+\caption{Porównanie dostępnych akcelerometrów}
+\label{tab:accelerometer}
+\end{table}
 
 \section{Podobne rozwiązania obecne na rynku}
 Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
