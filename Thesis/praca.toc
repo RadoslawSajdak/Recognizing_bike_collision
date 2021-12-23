@@ -1,0 +1,11 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {polish}{}
+\contentsline {chapter}{\numberline {1}Wstęp}{7}%
+\contentsline {section}{\numberline {1.1}Cele pracy}{7}%
+\contentsline {section}{\numberline {1.2}Analiza wymagań technicznych i dobór komponentów}{7}%
+\contentsline {subsection}{\numberline {1.2.1}Akcelerometr}{8}%
+\contentsline {subsubsection}{\numberline {1.2.1.1}MPU-6050}{8}%
+\contentsline {subsubsection}{\numberline {1.2.1.2}LSM9DS1}{9}%
+\contentsline {subsubsection}{\numberline {1.2.1.3}LSM6DSOX}{9}%
+\contentsline {subsubsection}{\numberline {1.2.1.4}Wybór akcelerometru}{9}%
+\contentsline {section}{\numberline {1.3}Podobne rozwiązania obecne na rynku}{9}%

@@ -1,0 +1,85 @@
+\chapter{Wstęp}
+\label{cha:wstep}
+
+Obecny rozwój mikroprocesorów, pozwala na tworzenie coraz bardziej złożonych urządzeń. Rozwój układów o niskim zużyciu energii, popycha elektronikę w kierunku małych, wielofunkcyjnych urządzeń. Połączenie tych dwóch procesów pozwala na stworzenie elastycznych urządzeń, których zastosowanie może zmieniać się jedynie dzięki oprogramowaniu.
+
+%---------------------------------------------------------------------------
+
+\section{Cele pracy}
+\label{sec:celePracy}
+
+Rowerzyści górscy, podczas samotnych wypraw rowerowych, wielokrotnie zastanawiają się, co w sytuacji, gdy ulegną wypadkowi podczas samotnej wyprawy?
+Jak długo nikt nie wezwie pomocy? W ten sposób, powstał pomysł stworzenia urządzenia asystującego.
+\newline
+Celem pracy było stworzenie innowacyjnego urządzenia wykrywającego upadek na rowerze. Urządzenie miało być przymocowane do ramy roweru. Urządzenie, informację o wypadku wysyła przy użyciu modemu LTE-M opartego o interfejs szeregowy UART. Za lokalizowanie urządzenia, odpowiadać będzie moduł GPS oparty o magistralę $I^{2}C$. Całość, sterowana będzie przy użyciu mikrokontrolera.
+
+\section{Analiza wymagań technicznych i dobór komponentów}
+
+Docelowo, urządzenie miało zwiększać bezpieczeństwo podczas wypraw rowerowych. Musiało więc być bardzo energooszczędne. Minimalne wymaganie, to 24 godziny pracy na jednym ładowaniu baterii. Jednocześnie, nie może być zbyt duże, aby w łatwy sposób można było zamontować je na rowerze. Pobierana lokalizacja, miała mieć dokładność około 100m. Jest to dokładność wystarczająca, aby zobaczyć ranną osobę, leżący rower, lub usłyszeć wołanie o pomoc. Ważnym było, aby urządzenie, było w pełni niezależne od innych układów, jak np. telefon.
+\newline
+Planując pracę, zdecydowano się wykorzystać trzy moduły:
+\begin{itemize}
+    \item Akcelerometr
+    \item GPS
+    \item LTE
+\end{itemize}
+Dodatkowo, ze względu na łatwy w użyciu stos Bluetooth, wykorzystano również Bluetooth Low Energy, celem stworzenia bezprzewodowego interfejsu sterowania urządzeniem.
+\newline
+Ponieważna rynku dostępnych było wiele różnych modułów, poniżej dokonano ich porównania oraz wyboru układów, najbardziej pasujących do stworzonego rozwiązania.
+
+\subsection{Akcelerometr}
+Akcelerometry to układy, mierzące przyspieszenie. Mogą dokonać pomiaru przyspieszenia statycznego (np. Ziemskiego), lub dynamicznego, działającego z sił, działających na układ. W przypadku dostępnych na rynku akcelerometrów należy pamiętać, że w stanie spoczynku wskazują one przyspieszenie około $9.81\frac{m}{s^{2}}$. Można więc było, wykorzystać ten fakt, do implementacji algorytmu.
+\newline
+Obecnie, większość układów to układy integrujące akcelerometr i żyroskop w jednym układzie scalonym. Coraz częściej, można też spotkać magnetometr. Dla obecnych na rynku układów, wyróżniamy dwa najważniejsze parametry:
+\begin{itemize}
+    \item Zakres pracy akcelerometru - określany jako $\pm X_{g}$, a więc przyspieszenie w trzech kierunkach, podane jako wielokrotność przyspieszenia Ziemskiego. Zazwyczaj, wartość ta, mieści się w przedziale od kilku, do kilkunastu g.
+    \item Zakres pomiarów żyroskopu - określony jako \emph{dps (degrees per second)}. Jeśli prędkość kątowa będzie większa, niż wybrany zakres, układ ulegnie nasyceniu
+\end{itemize}
+Głównym wymaganiem dotyczącym akcelerometru, była jego energooszczędność. Był to jedyny układ, który działa przez cały czas. Z tego powodu, akcelerometr powinien był nie tylko zużywać mało prądu, ale również posiadać różne tryby pracy. Dodatkowym atutem, była wbudowana pamięć, pozwalająca na buforowanie danych.
+\newline
+Spośród dostępnych na rynku układów, wybrane zostały trzy, dostępne w trakcie tworzenia pracy.
+
+\subsubsection{MPU-6050}
+Wybrany układ, jest 3-osiowym akcelerometem i żyroskopem. Korzysta on z magistrali $I^{2}C$. Zgodnie z dokumentacją układu, w normalnym trybie pracy, można spodziewać się ok. 3.8mA prądu, pobieranego przez układ.\cite{MPU6050} Wartość tę, można zredukować do nawet 10$\mu$A, ograniczając częstotliwość próbkowania akcelerometru do 1.25Hz i wyłączając żyroskop. Ponadto, układ posiada tryb niskiego zużycia energii, pozwalający uśpić nieaktywny układ. Sam akcelerometr, pracuje w zakresie $\pm$2g, $\pm$4g, $\pm$8g oraz $\pm$16g. Dodatkowo, układ posiada tzw. Digital Motion Pocessor (DMP), czyli układ wspomagający przetwarzanie danych w kierunku wykrywania gestów. Wbudowane FIFO, pozwala na buforowanie danych. Zaletą akcelerometru, są programowalne przerwania oraz przerwanie "High-G", wyzwalane w momencie przekroczenia zdefiniowanego przyspieszenia.
+
+\subsubsection{LSM9DS1}
+Układ ten, nie różni się znacząco od MPU-6050. Zgodnie z dokumentacją, jest on dodatkowo wyposażony w magnetometr. Największą z różnic, jest pobierany przez niego prąd. W przypadku LSM9DS1, akcelerometr w trybie normalnym, pobiera około 600$\mu$A.\cite{LSM9DS1} Niestety, wykorzystanie żyroskopu, dodaje kolejne 4mA. Żyroskop, posiada tryb niskiego zużycia energii, pozwalający ograniczyć zużycie energii do 1.9mA. Tym samym, układ nie jest w stanie zejść poniżej 1.96mA, co znacząco przekraczało domniemany pobór prądu.
+
+\subsubsection{LSM6DSOX}
+Ostatni z wybranych układów, był układem producenta ST. Jest on dedykowany do rozwiązań, o niskim zużyciu energii. Według dokumentacji, jego zużycie energii to 550$\mu$A.\cite{LSM6DSOX} Wartość ta, jest kilkukrotnie niższa, niż w przypadku MPU-6050. Co więcej, układ posiada tryb LowPower, w którym zużycie energii można ograniczyć do nawet 4$\mu$A. LSM6DSOX, posiada również 9kB FIFO, po którego napełnieniu, wystawiane jest przerwanie. Dodatkową zaletą, jest szesnaście programowalnych maszyn stanów. Pozwalają one na maksymalne ograniczanie zużycia energii, dzięki możliwości wyłączenia mikrokontrolera w trybie analizy danych. LSM6DSOX, do komunikacji wykorzystuje $I^{2}C$. Pozostałe jego parametry, są zbliżone do opisywanych wcześniej.
+
+\subsubsection{Wybór akcelerometru}
+\begin{center}
+\begin{tabular}{|c | c | c | c|}
+    \hline
+     & MPU-6050 & LSM9DS1 & LSM6DSOX \\
+    \hline
+    FIFO & 1kB  &   128B  & 9kB \\
+    \hline
+    Prąd pracy  & 3.8 mA & 600 $\mu$ & 550 $\mu$ \\
+    \hline
+    Low Power & 10-110 $\mu$A & 1.9-3.1 mA & 4-20 $\mu$A\\
+    \hline
+    Zakres pracy & 2-16g & 2-16g & 2-16g\\
+    \hline
+\end{tabular}
+\end{center}
+
+\section{Podobne rozwiązania obecne na rynku}
+Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
+
+%---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+

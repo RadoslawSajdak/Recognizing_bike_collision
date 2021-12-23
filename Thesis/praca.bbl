@@ -1,0 +1,38 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{MPU6050}{manual}{}
+    \field{labeltitlesource}{title}
+  \field{note}{https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf}
+    \field{title}{Dokumentacja układu MPU-6050}
+  \endentry
+
+  \entry{LSM9DS1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{https://www.st.com/resource/en/datasheet/lsm9ds1.pdf}
+    \field{title}{Dokumentacja układu LSM9DS1}
+  \endentry
+
+  \entry{LSM6DSOX}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{https://www.st.com/resource/en/datasheet/lsm6dsox.pdf}
+    \field{title}{Dokumentacja układu LSM6DSOX}
+  \endentry
+\enddatalist
+\endinput
