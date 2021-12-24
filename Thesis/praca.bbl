@@ -91,6 +91,8 @@
     \strng{namehash}{S1}
     \strng{fullhash}{S1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Strona producenta rozwiązania ANGI}
     \verb{url}
     \verb https://www.specialized.com/pl/pl/stories/angi
     \endverb

@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: praca.aux
 The style file: biblatex.bst
 A level-1 auxiliary file: wstep.aux
+A level-1 auxiliary file: prototyp.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -25,37 +26,37 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 13 entries,
             6365 wiz_defined-function locations,
-            1240 strings with 9986 characters,
-and the built_in function-call counts, 19575 in all, are:
+            1242 strings with 10033 characters,
+and the built_in function-call counts, 19630 in all, are:
 = -- 588
 > -- 141
 < -- 114
 + -- 96
 - -- 51
-* -- 558
+* -- 572
 := -- 835
 add.period$ -- 0
 call.type$ -- 13
-change.case$ -- 27
+change.case$ -- 28
 chr.to.int$ -- 42
 cite$ -- 24
-duplicate$ -- 2520
-empty$ -- 3024
+duplicate$ -- 2528
+empty$ -- 3032
 format.name$ -- 43
-if$ -- 4681
+if$ -- 4691
 int.to.chr$ -- 0
 int.to.str$ -- 13
 missing$ -- 0
-newline$ -- 99
+newline$ -- 101
 num.names$ -- 38
-pop$ -- 3949
+pop$ -- 3943
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 31
 quote$ -- 0
-skip$ -- 903
+skip$ -- 904
 stack$ -- 0
-substring$ -- 378
-swap$ -- 651
+substring$ -- 380
+swap$ -- 663
 text.length$ -- 134
 text.prefix$ -- 0
 top$ -- 1
@@ -63,4 +64,4 @@ type$ -- 430
 warning$ -- 0
 while$ -- 104
 width$ -- 0
-write$ -- 87
+write$ -- 89

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  24 DEC 2021 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  24 DEC 2021 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -934,7 +934,7 @@ Package csquotes Info: Redefining alias 'default' -> 'polish'.
 LaTeX Warning: Unused global option(s):
     [11pt].
 
-(/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux))
+(/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
 \openout1 = `praca.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
@@ -1109,52 +1109,61 @@ File: Graphics/angi.png Graphic file (type png)
 <use Graphics/angi.png>
 Package pdftex.def Info: Graphics/angi.png  used on input line 182.
 (pdftex.def)             Requested size: 113.81102pt x 63.9998pt.
-) [13 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/angi.png>] [14
+) [13 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/angi.png>]
+\openout2 = `prototyp.aux'.
+
+ (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.tex [14
+
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Rozdzia\l  2.
+) [15] [16
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu MPU-6050\T1/ptm/m/n/10.95 . https://invensense.tdk.com/wp-
  []
 
 
-Overfull \hbox (27.55188pt too wide) in paragraph at lines 181--181
+Overfull \hbox (27.55188pt too wide) in paragraph at lines 180--180
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu AT-mega328p\T1/ptm/m/n/10.95 . http://www.elenota.pl/datasheetpdf/158353/Atmel/ATMEGA328P. 
  []
 
 
-Overfull \hbox (7.40369pt too wide) in paragraph at lines 181--181
+Overfull \hbox (7.40369pt too wide) in paragraph at lines 180--180
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu STM32F303K8\T1/ptm/m/n/10.95 . https://www.st.com/resource/en/datasheet/stm32f303k8.pdf. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu SIM800L\T1/ptm/m/n/10.95 . https://www.filipeflop.com/img/files/download/Datasheet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu Be-itian BN-220\T1/ptm/m/n/10.95 . https://files.banggood.com/2016/11/BN-
  []
 
-[15] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux))
+[17] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29292 strings out of 483075
- 572081 string characters out of 5963833
- 1026534 words of memory out of 5000000
- 43781 multiletter control sequences out of 15000+600000
+ 29304 strings out of 483075
+ 572561 string characters out of 5963833
+ 1029033 words of memory out of 5000000
+ 43786 multiletter control sequences out of 15000+600000
  604657 words of font info for 94 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
- 60i,11n,60p,1512b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,60p,1512b,1872s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (15 pages, 606617 bytes).
+Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (17 pages, 608495 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
