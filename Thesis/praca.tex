@@ -98,12 +98,13 @@ backend=bibtex
 \usepackage{booktabs}
 \usepackage{makecell}
 \usepackage{tikz}
+\usepackage{pifont}
 \usepackage[flushleft]{threeparttable}
 
 % defines the X column to use m (\parbox[c]) instead of p (`parbox[t]`)
 \newcolumntype{C}[1]{>{\hsize=#1\hsize\centering\arraybackslash}X}
-
-
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\cmark}{\ding{51}}%
 %---------------------------------------------------------------------------
 
 \author{Radosław Sajdak}

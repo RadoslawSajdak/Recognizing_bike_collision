@@ -80,7 +80,7 @@ Mikrokontroler ATmega328p, to jeden z najpopularniejszych układów na rynku. Je
 Układ STM32F303K8 oparty jest na rdzeniu ARM Cortex M4. Posiada on wbudowany układ czasu rzeczywistego z funkcją wybudzania z kalendarzem. 11 wbudowanych liczników, pozwala na budowanie wyjątkowo złożonych aplikacji. Mikrokontroler wyposażono w SPI, I$^{2}$C, SPI, oraz 3 UARTy. W przypadku rdzeni Cortex, każdy z pinów może być skonfigurowany jako przerwanie, co daje nam aż 60 przerwań. \cite{STM32F303K8} Układ, może być taktowany zewnętrznym zegarem o częstotliwości do 32MHz, a więc dwukrotnie większym, niż w przypadku kontrolera ATmega. STM32F303K8 pobiera (w zależności od konfiguracji) 12.9 - 34mA w trybie pracy oraz 0.93-18.57$\mu$A w trybie głębokiego uśpienia. Warto zaznaczyć, że wartości maksymalneukład osiąga, gdy wszystkie peryferia są uruchomione. W przypadku tej pracy, dążono do minimalizacji ilości działających podzespołów.
 
 \subsubsection{nRF52840}
-Mikrokontroler nRF52840 jest najmocniejszym spośród wybranych do tego porównania. Oparty na rdzeniu ARM Cortex M4, taktowany zegarem 64MHz, posiada 1MB pamięci flash oraz 256kB RAM. Wspiera on I$^{2}$C, 4x SPI, 2x UART i 3xRTC. Obsługuje też Bluetooth, co wyróżnia go na tle dwóch pozostałych układów. Mimo, że posiada on tak dużo peryferiów, jego zużycie energii w trybach głębokiego uśpienia mieści się pmiędzy 0.4uA, a 17.37uA. Są to wartości zbliżone do kontrolra STM32F303K8, opartego na tym samym rdzeniu. Pracujący układ, w zależności od konfiguracji, zużywa 2.8-6.3mA. Dodatkowo, nRF52840 posiada wbudowane PMU (Power Management Unit), które automatycznie zarządza zużywaną energią, bez ingerencji użytkownika. Zaletą, jest również bardzo obszerna dokumentacja, dedykowane fora wsparcia oraz powszechność stosowania tego układu w urządzeniach.
+Mikrokontroler nRF52840 jest najmocniejszym spośród wybranych do tego porównania. Oparty na rdzeniu ARM Cortex M4, taktowany zegarem 64MHz, posiada 1MB pamięci flash oraz 256kB RAM. Wspiera on I$^{2}$C, 4x SPI, 2x UART i 3xRTC. Obsługuje też Bluetooth, co wyróżnia go na tle dwóch pozostałych układów. Mimo, że posiada on tak dużo peryferiów, jego zużycie energii w trybach głębokiego uśpienia mieści się pmiędzy 0.4uA, a 17.37uA. Są to wartości zbliżone do kontrolra STM32F303K8, opartego na tym samym rdzeniu. Pracujący układ, w zależności od konfiguracji, zużywa 2.8-6.3mA. Dodatkowo, nRF52840 posiada wbudowane PMU (Power Management Unit), które automatycznie zarządza zużywaną energią, bez ingerencji użytkownika. Zaletą, jest również bardzo obszerna dokumentacja\cite{NRF52840}, dedykowane fora wsparcia oraz powszechność stosowania tego układu w urządzeniach.
 
 \subsubsection{Wybór mikrokontrolera}
 Porównanie układów pokazało, że prosta ATmega328p znacząco odstaje od pozostałych układów. Mimo, że jest najprostszym z układów, nie mógł zostać wykorzystany w pracy, ze względu na wysokie zużycie energii. Problemem mogła okazać się również niewielka liczba liczników. W tym przypadku, najlepiej wypadł STM32F303K8. Niestety, jego wadą było wysokie zużycie energii w trakcie pracy. Z tego powodu, ostateczny wybór padł na nRF52840. Podsumowanie porównania, obrazuje poniższa tabela.\ref{tab:microcontroller}
@@ -99,7 +99,7 @@ Porównanie układów pokazało, że prosta ATmega328p znacząco odstaje od pozo
         \hline
         Liczniki & 2x8bit, 1x16bit & 1x32bit, 2x24bit, 8x16bit & 5x32bit\\
         \hline
-        I$^{2}$C & \checkmark & \checkmark & \checkmark\\
+        I$^{2}$C & \cmark & \cmark & \cmark\\
         \hline
         UART & 1 & 3 & 2\\
         \hline
@@ -108,12 +108,83 @@ Porównanie układów pokazało, że prosta ATmega328p znacząco odstaje od pozo
         System operacyjny & Brak & Free RTOS & Zephyr RTOS\\
         \hline
     \end{tabular}
-    \caption{Porównanie dostępnych akcelerometrów}
+    \caption{Porównanie dostępnych mikroprocesorów}
     \label{tab:microcontroller}
     \end{table}
 
+\subsection{Modem GSM/LTE}
+Modem GSM/LTE to układ pozwalający na komunikację przez sieci komórkowe 4G lub GSM. Zastosowanie tego typu komunikacji, pozwoliło zapewnić dostęp do sieci niemal niezależnie od miejsca w którym znajdowało się urządzenie. Ponieważ procedura autentykacji do sieci jest czasochłonna i wymaga radzia, działającego z dużą mocą. Zgodnie z przewidywaniami, był jest to układ o największym zużyciu energii. Minimalnym wymaganiem dotyczącym tego układu, jest obsługa SMS. Podczas rozważań nad wyborem modemu, dodatkową zaletą była obsługa zapytań HTTP. Pozwoliła ona na przetestowanie alternatywnego podejścia do problemu powiadamiania.
+
+\subsubsection{SIM800L}
+SIM800L to jeden z najpopularniejszych układów do amatorskich rozwiązań. Jego największymi zaletami są cena i mnogość dostępnych bibliotek czy przykładów. Niestety, głównie dedykowanych do mikrokontrolera ATmega328p. Zastosowanie go z innymi układami nie jest jednak problemem, ponieważ działa on w oparciu o tak zwane komendy AT, wysyłane przez UART. Pobór prądu tego modemu, mieści się pomiędzi 150, a 450mA podczas transmisji danych. oraz 50-60$\mu$ w trybie PowerDown. Co ważne, podczas uruchamiania, układ pobiera do 2A prądu, co jest wartością bardzo dużą, w przypadku układów zasilanych bateryjnie. Niestety, układ ten działa z przestarzałymi już sieciami GSM i nie obsługuje zapytań HTTP.\cite{SIM800L}
+
+\subsubsection{Quectel EC20 R2.1}
+Jest to jeden z łatwo dostępnych na rynku układów, działających w oparciu o technologię LTE. komunikacja z nim, przebiega przy użyciu komend AT. Układ, wspiera możliwość wysyłania zapytań HTTP. Pobór prądu modemu, osiąga 300mA, jednak w tybie PowerDown, wynosi jedynie 11$\mu$A. Jest to więc wartość ponad pięciokrotnie mniejsza, niż w przypadku SIM800L. Jest to ważne, ponieważ projektowane urządzenie miało pracować większość czasu w trybie całkowitego uśpienia. W przypadku tego układu, problemem było również znalezienie pełnej dokumentacji.
+
+\subsubsection{SKY66430}
+Jest to produkt firmy Skyworks, specjalizującej się w tworzeniu półprzewodników do układów radiowych i komunikacji mobilnej. Wybrany modem, działa w technologii LTE-M, co wymagało zakup specjalnych kart SIM. Układy LTE-M, zużywają znacznie mniej energii niż układy komunikujące się przez zwykłą sieć 4G. Są też w stanie transmitować z miejsc, o bardzo słabym zasięgu. SKY66430 podczas transmisji pobiera 150-250mA prądu, a w trybie PowerDown jedynie 1$\mu$A. Wartości te, uczyniły go więc najlepszym z rozważanych układów. Dodatkowym jego atutem jest obsługa zapytań HTTP. \cite{SKY66430}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c | c | c | c|}
+        \hline
+         & SIM800L & Quectel EC20 R2.1 & SKY66430 \\
+        \hline
+        Prąd pracy  & 150-450 mA & 300 mA &150-250 mA \\
+        \hline
+        PowerDown & 50-60 $\mu$A & 11 $\mu$A & 1 $\mu$A\\
+        \hline
+        SMS & \cmark & \cmark & \cmark\\
+        \hline
+        HTTP & \xmark & \cmark & \cmark\\
+        \hline
+    \end{tabular}
+    \caption{Porównanie dostępnych mikroprocesorów}
+    \label{tab:modem}
+    \end{table}
+
+\subsubsection{Wybór modemu}
+Analizując powyższe dane, nie sposób było wybrać układ inny, niż SKY66430. Jest to układ o zdecydowanie najniższym zużyciu energii. Co więcej, wspiera on zapytania HTTP, co pozwoliło na przeprowadzenie dodatkowych testów projektu.
+
+\subsection{GPS}
+GPS, czyli Global Positioning System, to system nawigacji oparty na lokalizacji satelitarnej. Jego zadaniem, jest dostarczenie użytkownikom informacji o ich położeniu. W przypadku projektowanego urządzenia, kluczowym było pozyskanie możliwie dokładnej lokalizacji. Tak jak w przypadku pozostałych komponentów, układ powinien był charkteryzować się jak najniższym zużyciem energii. Ponieważ układ ten mógł okazać się najbardziej energochłonny, dodatkowym wymaganiem była możliwość jego wyłączenia. Istotnym elementem była również dokładność określanego położenia. Jako wystarczająca, uznana została dokładność 100m.
+
+\subsubsection{Beitian BN-220}
+Jest to jeden z najtańszych układów dostępnych na rynku. Układ, komunikuje się przy użyciu interfejsu UART, przesyłając wiadomości NMEA. Są to zdania, zapisane kodem ASCII, ustandaryzowanej strukturze. Zgodnie z dokumentacją, układ pobiera około 50mA i jest zasilany napięciem 5V.\cite{BN220}
+
+\subsubsection{Mediatek MT3339}
+Kolejny układ, zasilany jest napięciem 3.3V i pobiera około 3mA prądu. Tak, jak BN-220, komunukuje się przy użyciu wiadomości NMEA, jednak korzystając z magistrali I$^{2}$C. Dodatkowo, układ ten, posiada wewnętrzny zegar czasu rzeczywistego, pozwalający na wybudzenie układu ze stanu uśpienia. Ciekawą funkcjonalnością tego modułu, jest obsługa EPO. Jest to predykcja położenia satelit, na podstawie czasu i zapisanego w pamięci pliku. Dzięki temu rozwiązaniu, można znacząco skracać czas określania lokalizacji. Dokładność urządzenia to około 3m, co jest wartością znacznie większą niż zakładana.\cite{MT3339}
+
+\subsubsection{Mediatek MT3333}
+MT3333 to układ bardzo zbliżony do wspomnianego wcześniej MT3339. Różnią się one zużyciem energii. W przypadku MT3333, pobór prądu wynosi od 5 do 19mA. Podobnie jak poprzednik, komunikuje się on przy użyciu wiadomości NMEA, przesyłanych magistralą I$^{2}$C.\cite{MT3333}
+
+\subsubsection{Wybór modułu GPS}
+Pomimo, że układ MT3339 cechuje się najmniejszym zużyciem energii oraz posiada interesujące funkcjonalności, zdecydowano się na wybór modułu Mediatek MT3333. Wynikło to bezpośrednio z faktu, że w momencie tworzenia pracy, dostępna była tylko dokumentacja do układu MT3333. Ponieważ jednak układy te są zgode ze standardem oraz korzystają z tego samego interfejsu komunikacji, możliwą byłaby podmiana układów.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c | c | c | c|}
+        \hline
+         & BN-220 & MT3339 & MT3333 \\
+        \hline
+        Prąd pracy  & 50 mA & 3 mA &5-19 mA \\
+        \hline
+        Interfejs & UART & I$^{2}$C & I$^{2}$C\\
+        \hline
+    \end{tabular}
+    \caption{Porównanie dostępnych modułów GPS}
+    \label{tab:gps}
+    \end{table}
+
 \section{Podobne rozwiązania obecne na rynku}
-Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
+Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI, widoczne na rysunku \ref{img:angi_img}. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
+\begin{figure}[h]
+\includegraphics[width=4cm]{Graphics/angi.png}
+\centering
+\caption{Urządzenie ANGI, stworzone przez firmę Specialized.\cite{ANGI}}
+\centering
+\label{img:angi_img}
+\end{figure}
 
 %---------------------------------------------------------------------------
 

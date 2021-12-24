@@ -13,4 +13,14 @@
 \contentsline {subsubsection}{\numberline {1.2.2.2}STM32F303K8}{10}%
 \contentsline {subsubsection}{\numberline {1.2.2.3}nRF52840}{10}%
 \contentsline {subsubsection}{\numberline {1.2.2.4}Wybór mikrokontrolera}{10}%
-\contentsline {section}{\numberline {1.3}Podobne rozwiązania obecne na rynku}{11}%
+\contentsline {subsection}{\numberline {1.2.3}Modem GSM/LTE}{11}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}SIM800L}{11}%
+\contentsline {subsubsection}{\numberline {1.2.3.2}Quectel EC20 R2.1}{11}%
+\contentsline {subsubsection}{\numberline {1.2.3.3}SKY66430}{12}%
+\contentsline {subsubsection}{\numberline {1.2.3.4}Wybór modemu}{12}%
+\contentsline {subsection}{\numberline {1.2.4}GPS}{12}%
+\contentsline {subsubsection}{\numberline {1.2.4.1}Beitian BN-220}{12}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}Mediatek MT3339}{12}%
+\contentsline {subsubsection}{\numberline {1.2.4.3}Mediatek MT3333}{13}%
+\contentsline {subsubsection}{\numberline {1.2.4.4}Wybór modułu GPS}{13}%
+\contentsline {section}{\numberline {1.3}Podobne rozwiązania obecne na rynku}{13}%

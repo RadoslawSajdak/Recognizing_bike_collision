@@ -46,5 +46,54 @@
     \field{note}{https://www.st.com/resource/en/datasheet/stm32f303k8.pdf}
     \field{title}{Dokumentacja układu STM32F303K8}
   \endentry
+
+  \entry{NRF52840}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{https://infocenter.nordicsemi.com/pdf/nRF52840-PS-v1.1.pdf}
+    \field{title}{Dokumentacja układu nRF52840}
+  \endentry
+
+  \entry{SIM800L}{manual}{}
+    \field{labeltitlesource}{title}
+  \field{note}{https://www.filipeflop.com/img/files/download/Datasheet-SIM800L.pdf}
+    \field{title}{Dokumentacja układu SIM800L}
+  \endentry
+
+  \entry{SKY66430}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Dokumentacja układu SKY66430}
+  \endentry
+
+  \entry{BN220}{manual}{}
+    \field{labeltitlesource}{title}
+  \field{note}{https://files.banggood.com/2016/11/BN-22020GPS+Antenna20datasheet.pdf}
+    \field{title}{Dokumentacja układu Beitian BN-220}
+  \endentry
+
+  \entry{MT3339}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{https://labs.mediatek.com/en/chipset/MT3339}
+    \field{title}{Opis producenta układu MT3339}
+  \endentry
+
+  \entry{MT3333}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Dokumentacja układu MT3333}
+  \endentry
+
+  \entry{ANGI}{unpublished}{}
+    \name{author}{1}{}{%
+      {{hash=S}{%
+         family={Specialized},
+         familyi={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{S1}
+    \strng{fullhash}{S1}
+    \field{labelnamesource}{author}
+    \verb{url}
+    \verb https://www.specialized.com/pl/pl/stories/angi
+    \endverb
+  \endentry
 \enddatalist
 \endinput
