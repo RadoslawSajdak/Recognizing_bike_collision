@@ -34,5 +34,17 @@
     \field{note}{https://www.st.com/resource/en/datasheet/lsm6dsox.pdf}
     \field{title}{Dokumentacja układu LSM6DSOX}
   \endentry
+
+  \entry{ATMEGA328P}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{http://www.elenota.pl/datasheetpdf/158353/Atmel/ATMEGA328P}
+    \field{title}{Dokumentacja układu ATmega328p}
+  \endentry
+
+  \entry{STM32F303K8}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{https://www.st.com/resource/en/datasheet/stm32f303k8.pdf}
+    \field{title}{Dokumentacja układu STM32F303K8}
+  \endentry
 \enddatalist
 \endinput

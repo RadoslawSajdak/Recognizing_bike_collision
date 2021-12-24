@@ -70,6 +70,17 @@ Spośród trzech dostępnych układów, wybrany został LSM6DSOX. Jak pokazuje t
 \label{tab:accelerometer}
 \end{table}
 
+\subsection{Mikrokontroler}
+Mikrokontroler, jest mózgiem układu. z tego powodu, wybrany układ musiał być bardzo wydajny, ale Jednocześnie energooszczędny. Kolejnym z wymagań, była obsługa interfejsu I$^{2}$C oraj UART. Ponieważ wybrany akcelerometr posiada dwa piny przerwań zewnętrznych, mikrokontroler musiał być gotowy je obsłużyć.
+
+\subsubsection{ATmega328p}
+Mikrokontroler ATmega328p, to jeden z najpopularniejszych układów na rynku. Jego niska cena i łatwość użycia, pozwala budować najróżniejsze aplikacje. Układ wspiera zewnętrzny zegar o częstotliwości do 16MHz. Posiada on UART, I$^{2}$C oraz SPI, co pozwoliło rozważyć go w pracy. Dodatkowo, w dokumentacji, można znaleźć informację o dwóch przerwaniach zewnętrznych, obsługiwanych przez układ.\cite{ATMEGA328P} Dla najwyższej częstotliwości, podczas pracy układ pobiera 9-14mA. Wartość ta, może zostać ograniczona do 2.8mA w trybie czuwania. W trybie zupełnego uśpienia, mikrokontroler pobiera pomiędzy 44, a 66$\mu$A.
+
+\subsection{STM32F303K8}
+Układ STM32F303K8 oparty jest na rdzeniu ARM Cortex M4. Posiada on wbudowany układ czasu rzeczywistego z funkcją wybudzania z kalendarzem. 11 wbudowanych liczników, pozwala na budowanie wyjątkowo złożonych aplikacji. Mikrokontroler wyposażono w SPI, I$^{2}$C, SPI, oraz 3 UARTy. W przypadku rdzeni Cortex, każdy z pinów może być skonfigurowany jako przerwanie, co daje nam aż 60 przerwań. \cite{STM32F303K8} Układ, może być taktowany zewnętrznym zegarem o częstotliwości do 32MHz, a więc dwukrotnie większym, niż w przypadku kontrolera ATmega. STM32F303K8 pobiera (w zależności od konfiguracji) 12.9 - 34mA w trybie pracy oraz 0.93-18.57$\mu$A w trybie głębokiego uśpienia. Warto zaznaczyć, że wartości maksymalneukład osiąga, gdy wszystkie peryferia są uruchomione. W przypadku tej pracy, dążono do minimalizacji ilości działających podzespołów.
+
+\subsection{nRF528401}
+
 \section{Podobne rozwiązania obecne na rynku}
 Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
 
