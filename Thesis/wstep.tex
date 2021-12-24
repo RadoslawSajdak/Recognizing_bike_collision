@@ -59,7 +59,7 @@ Spośród trzech dostępnych układów, wybrany został LSM6DSOX. Jak pokazuje t
     \hline
     FIFO & 1kB  &   128B  & 9kB \\
     \hline
-    Prąd pracy  & 3.8 mA & 600 $\mu$ & 550 $\mu$ \\
+    Prąd pracy  & 3.8 mA & 600 $\mu$A & 550 $\mu$A \\
     \hline
     Low Power & 10-110 $\mu$A & 1.9-3.1 mA & 4-20 $\mu$A\\
     \hline
@@ -76,10 +76,41 @@ Mikrokontroler, jest mózgiem układu. z tego powodu, wybrany układ musiał by�
 \subsubsection{ATmega328p}
 Mikrokontroler ATmega328p, to jeden z najpopularniejszych układów na rynku. Jego niska cena i łatwość użycia, pozwala budować najróżniejsze aplikacje. Układ wspiera zewnętrzny zegar o częstotliwości do 16MHz. Posiada on UART, I$^{2}$C oraz SPI, co pozwoliło rozważyć go w pracy. Dodatkowo, w dokumentacji, można znaleźć informację o dwóch przerwaniach zewnętrznych, obsługiwanych przez układ.\cite{ATMEGA328P} Dla najwyższej częstotliwości, podczas pracy układ pobiera 9-14mA. Wartość ta, może zostać ograniczona do 2.8mA w trybie czuwania. W trybie zupełnego uśpienia, mikrokontroler pobiera pomiędzy 44, a 66$\mu$A.
 
-\subsection{STM32F303K8}
+\subsubsection{STM32F303K8}
 Układ STM32F303K8 oparty jest na rdzeniu ARM Cortex M4. Posiada on wbudowany układ czasu rzeczywistego z funkcją wybudzania z kalendarzem. 11 wbudowanych liczników, pozwala na budowanie wyjątkowo złożonych aplikacji. Mikrokontroler wyposażono w SPI, I$^{2}$C, SPI, oraz 3 UARTy. W przypadku rdzeni Cortex, każdy z pinów może być skonfigurowany jako przerwanie, co daje nam aż 60 przerwań. \cite{STM32F303K8} Układ, może być taktowany zewnętrznym zegarem o częstotliwości do 32MHz, a więc dwukrotnie większym, niż w przypadku kontrolera ATmega. STM32F303K8 pobiera (w zależności od konfiguracji) 12.9 - 34mA w trybie pracy oraz 0.93-18.57$\mu$A w trybie głębokiego uśpienia. Warto zaznaczyć, że wartości maksymalneukład osiąga, gdy wszystkie peryferia są uruchomione. W przypadku tej pracy, dążono do minimalizacji ilości działających podzespołów.
 
-\subsection{nRF528401}
+\subsubsection{nRF52840}
+Mikrokontroler nRF52840 jest najmocniejszym spośród wybranych do tego porównania. Oparty na rdzeniu ARM Cortex M4, taktowany zegarem 64MHz, posiada 1MB pamięci flash oraz 256kB RAM. Wspiera on I$^{2}$C, 4x SPI, 2x UART i 3xRTC. Obsługuje też Bluetooth, co wyróżnia go na tle dwóch pozostałych układów. Mimo, że posiada on tak dużo peryferiów, jego zużycie energii w trybach głębokiego uśpienia mieści się pmiędzy 0.4uA, a 17.37uA. Są to wartości zbliżone do kontrolra STM32F303K8, opartego na tym samym rdzeniu. Pracujący układ, w zależności od konfiguracji, zużywa 2.8-6.3mA. Dodatkowo, nRF52840 posiada wbudowane PMU (Power Management Unit), które automatycznie zarządza zużywaną energią, bez ingerencji użytkownika. Zaletą, jest również bardzo obszerna dokumentacja, dedykowane fora wsparcia oraz powszechność stosowania tego układu w urządzeniach.
+
+\subsubsection{Wybór mikrokontrolera}
+Porównanie układów pokazało, że prosta ATmega328p znacząco odstaje od pozostałych układów. Mimo, że jest najprostszym z układów, nie mógł zostać wykorzystany w pracy, ze względu na wysokie zużycie energii. Problemem mogła okazać się również niewielka liczba liczników. W tym przypadku, najlepiej wypadł STM32F303K8. Niestety, jego wadą było wysokie zużycie energii w trakcie pracy. Z tego powodu, ostateczny wybór padł na nRF52840. Podsumowanie porównania, obrazuje poniższa tabela.\ref{tab:microcontroller}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c | c | c | c|}
+        \hline
+         & ATmega328p & STM32F303K8 & nRF52840 \\
+        \hline
+        FLASH & 32kB  &   64kB  & 1MB \\
+        \hline
+        Prąd pracy  & 9.3-14 mA & 12.9-34 mA &2.8-6.3 mA \\
+        \hline
+        Low Power & 40-66 $\mu$A & 0.93-18.57 $\mu$A & 0.4-17.37 $\mu$A\\
+        \hline
+        Liczniki & 2x8bit, 1x16bit & 1x32bit, 2x24bit, 8x16bit & 5x32bit\\
+        \hline
+        I$^{2}$C & \checkmark & \checkmark & \checkmark\\
+        \hline
+        UART & 1 & 3 & 2\\
+        \hline
+        Przerwania zewnętrzne & 2 & 16 & 48\\
+        \hline
+        System operacyjny & Brak & Free RTOS & Zephyr RTOS\\
+        \hline
+    \end{tabular}
+    \caption{Porównanie dostępnych akcelerometrów}
+    \label{tab:microcontroller}
+    \end{table}
 
 \section{Podobne rozwiązania obecne na rynku}
 Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
