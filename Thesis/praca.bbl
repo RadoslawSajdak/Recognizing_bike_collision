@@ -104,5 +104,11 @@
   \field{howpublished}{\url{https://www.st.com/resource/en/application_note/dm00572971-lsm6dsox-finite-state-machine-stmicroelectronics.pdf}}
     \field{title}{Nota aplikacyjna maszyn stanów układu LSM6DSOX}
   \endentry
+
+  \entry{polte}{manual}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://www.polte.com/our-technology/how-it-works/}}
+    \field{title}{POLTE website - How it works?}
+  \endentry
 \enddatalist
 \endinput

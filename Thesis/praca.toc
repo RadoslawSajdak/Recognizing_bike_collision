@@ -40,4 +40,6 @@
 \contentsline {section}{\numberline {3.1}Analiza poboru prądu układu}{29}%
 \contentsline {section}{\numberline {3.2}Testy algorytmów}{29}%
 \contentsline {chapter}{\numberline {4}Możliwości rozwoju urządzenia}{31}%
+\contentsline {section}{\numberline {4.1}Możliwe ulepszenia rozwiązania}{31}%
+\contentsline {section}{\numberline {4.2}Kierunki rozwoju}{31}%
 \contentsline {chapter}{\numberline {5}Podsumowanie}{33}%

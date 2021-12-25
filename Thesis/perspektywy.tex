@@ -1,1 +1,11 @@
 \chapter{Możliwości rozwoju urządzenia}
+\section{Możliwe ulepszenia rozwiązania}
+W trakcie budowy urządzenia, uwagę poświęcono przede wszystkim stworzeniu rozwiązania w pełni działającego. Stworzone urządzenie, nie jest jednak pozbawione wad. Rozwijając urządzenie, na pewno należałoby rozbudować selftesty, wykonywane podczas uruchomienia układu. W szczególności, należy zwrócić uwagę na obsługę błędów wynikających z dostępu do sieci komórkowej. Pole do optymalizacji, jest również w przypadku układu GPS. Obecne w układzie MT3339 EPO, mogłoby znacząco skrócić czas określania przez układ lokalizacji, a co za tym idzie, wydłużyć czas pracy na jednym ładowaniu baterii.
+\newline
+Ponieważ akcelerometr posiada również rdzeń uczenia maszynowego, zbierając więcej danych, można stworzyć bardziej złożone wzory i algorytmy, służące jeszcze bardziej precyzyjnemu wykrywaniu wypadków.
+\section{Kierunki rozwoju}
+Stosując wspomnianą wcześniej funkcjonalność układu, można wykorzystać nauczanie maszynowe, aby dostosowywać algorytmy do stylu jazdy konkretnego rowerzysty. Sam Bluetooth wykorzystać można do stworzenia aplikacji na telefon, wprowadzającej nie tylko style jazdy rowerzystów, ale również typy rowerów. Dzięki aplikacji, możnaby łatwo zmieniać tolerancję dla przyspieszeń między rowerami górskimi, zjazdowymi, a szosowymi. Aby oszczędzać baterię, możnaby zaimplmentować działanie podobne do oferowanego przez Specialized ANGI. Gdy urządzenie znajdowałoby się w pobliżu sparowanego telefonu, powiadomienie wysyłane byłoby z telefonu, a w przypadku utraty połączenia Bluetooth, uruchamiany byłby wbudowany modem.
+\newline
+Interesującym kierunkiem rozwoju jest rezygnacja z powiadominia SMS, na rzecz opisywanych w pracy zapytań HTTP. Szybko rozwijająca się platforma Discord, wydaje się być bardzo dobrą alternatywą dla tworzenia niezależnej aplikacji mobilnej.
+\newline
+Szybko rozwijające się sieci komórkowe 4G/5G, dają również perspektywę na rezygnację z układu GPS. Coraz popularniejsze staje się rozwiązanie POLTE\cite{polte}, pozwalające określać lokalizację z dokładnością do stacji bazowej. Rozwiązanie to nie tylko usunęłoby energochłonny moduł GPS, ale również zmniejszyło ilość energii pochłanianej przez LTE.
