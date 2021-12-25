@@ -91,13 +91,15 @@ Pierwsza z maszyn stanów, służy wykryciu znaczących przeciążeń na dowolne
 Dwie kolejne maszyny stanów, przedstawione na diagramie \ref{img:fsm2}, to algorytmy wykrywające przewrócenie roweru. Podczas analizy danych zauważono, że każdy wypadek, kończył się przechyleniem roweru na jeden z boków. Z tego powodu, zaimplementowano licznik, który co 2 sekundy próbkuje wartość na osi Y i sprawdza, czy nie przekracza ona wartości bezwzględnej 0.6g. Jeśli przez dwie minuty, rower nie wróci do pozycji jazdy, wyzwolony zostaje alarm. W praktyce, opisana maszyna musiała zostać zaimplementowana w akcelerometrze jako dwie, niezależne, z uwagi na brak funkcji wartości bezwzględnej w układzie.
 \begin{figure}[h]
     \centering
-    \begin{subfigure}{4cm}
-    \includegraphics[width=4cm]{Graphics/All_axis_FSM1.png}
+    \begin{subfigure}[b]{5cm}
+    \centering
+    \includegraphics[width=3.5cm]{Graphics/All_axis_FSM1.png}
     \caption{Wykrycie silnego przeciążenia}
     \label{img:fsm1}
-    \end{subfigure}
-
-    \begin{subfigure}{4cm}
+    \end{subfigure}%
+    \hspace{1cm}
+    \begin{subfigure}[b]{5cm}
+    \centering
     \includegraphics[width=4cm]{Graphics/overturned_FSM2_3.png}
     \caption{Wykrycie przewrócenia roweru}
     \label{img:fsm2}
@@ -133,11 +135,13 @@ Ponieważ jednym z najważniejszych elementów pracy, było osiągniecie jak naj
     \centering
 
     \begin{subfigure}[b]{5cm}
+    \centering
     \includegraphics[width=5cm]{Graphics/Recognize_in_code.png}
     \caption{Wykrywanie zdarzenia przez mikrokontroler}
     \end{subfigure}%
     \hspace{3cm}
     \begin{subfigure}[b]{5cm}
+    \centering
     \includegraphics[width=5cm]{Graphics/Recognize_in_code_acc.png}
     \caption{Wykrywanie zdarzenia przez akcelerometr}
     \end{subfigure}%
@@ -191,7 +195,7 @@ Na potrzeby przetestowania zapytań HTTP, stworzone zostało proste gniazdo TCP 
 Finalnie, zdecydowano się na wysłanie prostego powiadomienia tekstowego, przy użyciu wiadomości SMS. Za tym rozwiązaniem, przemawiała stabilność i niezawodność sieci komórkowych, mających obecnie niemal całkowite pokrycie, nawet w górach. Wysłanie SMS, pozwoliło również uniezależnić urządzenie od innych aplikacji.
 Ponieważ współrzędne geograficzne nie są szczególnie użyteczne bez mapy, wysyłane powiadomienie SMS zawiera zawiera link do map Google. Link ten jest tworzony w kodzie układu, wykorzystując funkcje bibliotek standardowych. Rysunek \ref{img:notification} przedstawia powiadomienie, wysyłane przez urządzenie. Numer telefonu, na który powinno zostać wysłane powiadomienie, wpisywany jest do urządzenia przy użycu Bluetooth. W przypadku, gdy użytkownik nie wpisze żadnego numeru, urządzenie wyśle powiadomienie na ostatni znany mu numer. Jeśli pamięć przeznaczona na numer telefonu będzie pusta, w trakcie uruchamiania urządzenia wyzwolony zostanie buzzer który pozostanie włączony tak długo, aż użytkownik nie wpisze numeru. %TODO XD
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \begin{subfigure}[b]{6cm}
     \includegraphics[width=6cm]{Graphics/sms.jpg}

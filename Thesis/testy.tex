@@ -1,8 +1,16 @@
 \chapter{Testy urządzenia}
 \section{Analiza poboru prądu układu}
+Zarówno w trakcie tworzenia pracy jak i jej planowania, zakładano minimalizację zużycia energii przez układ. Dzięki zastosowaniu odpowiednich komponentów, założenie to, zostało spełnione w bardzo dobrym stopniu. W trybie analizy, gdzie urządzenie spędzało znakomitą większość czasu, wartość pobieranego prądu spadała do nawet 200$\mu$A. Dzięki temu, stosując małe ogniwo Li-Pol o pojemności 600mAh, urządzenie mogło czuwać przez nawet 3000 godzin, co daje 125 pełne doby. Najwięcej prądu, pobierało pierwsze wyzwoleie alarmu. Średni pobór prądu sięgał tutaj nawet 50mA, w zależności od czasu potrzebnego na określenie lokalizacji. Kolejne transmisje nie były już tak energochłonne, ponieważ uruchamiany był tylko modem LTE.
+\newline
+Rysunek \ref{img:current_summary} przedstawia kompletną analizę poboru prądu przez układ. Obszar pierwszy, to obszar inicjalizacji urządzenia. To tutaj ustawiany jest każdy z komponentów i dokonywana jest pierwsza rejestracja do sieci. Należy zauważyć, że w tym miejsciu nie był uruchamiany GPS, co przyspieszyło inicjalizację układu. Strefa ta, jest tzw. selftestem, gwarantującym, że urządzenie będzie działać poprawnie w przypadku wypadku. W strefie drugiej, wszystkie podzespoły, znajdowały się w trybie głębokiego uśpienia. Wbudowane w akcelerometr maszyny stanów, cały czas monitorowały dane w trybie niskiego poboru energii. Na granicy obszarów 2 i 3, nastąpiło przerwanie. Uruchomiło ono procedurę alarmu, wyzwalając buzzer oraz uruchamiając GPS. Obszar 3 stanowiła próba określenia swojego położenia, a następnie przygotowanie i wysłanie wiadomości, poprzedzone rejestracją do sieci komórkowej. W obszarze czwartym, modem przeszedł w tryb uśpienia, a uruchomiony został licznik, który po minucie wyzwoliłby kolejne wysłanie wiadomości. Na granicy stref 4 i 5, nastąpiło przytrzymanie przycisku, które zakończyło alarm i wyłącza buzzer. Układ ponownie przeszedł w tryb analizy danych.
+	
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=16cm]{Graphics/connection_with_fix_divided.png}
-    \caption{1. inicjalizacja urządzenia. 2.Tryb uśpienia. 3. Wyzwolenie alarmu oraz wysłanie lokalizacji. 4.Oczekiwanie wysłanie kolejnego powiadomienia. Buzzer włączony. 5.Przerwanie alarmu przyciskiem, uśpienie układu.}
+    \includegraphics[width=14cm]{Graphics/connection_with_fix_divided.png}
+    \caption{Analiza poboru prądu przy użyciu urządzenia otii}
     \label{img:current_summary}
 \end{figure}
+
+\section{Testy algorytmów}
+Przyłożyć maszyny stanów do przebiegów i pokazać, że to się pokrywa

@@ -5,6 +5,8 @@ The style file: biblatex.bst
 A level-1 auxiliary file: wstep.aux
 A level-1 auxiliary file: prototyp.aux
 A level-1 auxiliary file: testy.aux
+A level-1 auxiliary file: perspektywy.aux
+A level-1 auxiliary file: podsumowanie.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -27,7 +29,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 16 entries,
             6365 wiz_defined-function locations,
-            1251 strings with 10409 characters,
+            1253 strings with 10440 characters,
 and the built_in function-call counts, 22215 in all, are:
 = -- 582
 > -- 70
