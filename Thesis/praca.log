@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  24 DEC 2021 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  25 DEC 2021 16:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -917,14 +917,21 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count460
+\float@exts=\toks49
+\float@box=\box72
+\@float@everytoks=\toks50
+\@floatcapt=\box73
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box72
+\@tempboxb=\box74
 )
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                'urldate=iso' requires 'seconds=true'.
-(biblatex)                Setting 'seconds=true' on input line 149.
+(biblatex)                Setting 'seconds=true' on input line 152.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -937,33 +944,33 @@ LaTeX Warning: Unused global option(s):
 (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count460
+\scratchcounter=\count461
 \scratchdimen=\dimen325
-\scratchbox=\box73
-\nofMPsegments=\count461
-\nofMParguments=\count462
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count463
+\scratchbox=\box75
+\nofMPsegments=\count462
+\nofMParguments=\count463
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count464
 \MPscratchDim=\dimen326
-\MPnumerator=\count464
-\makeMPintoPDFobject=\count465
-\everyMPtoPDFconversion=\toks50
+\MPnumerator=\count465
+\makeMPintoPDFobject=\count466
+\everyMPtoPDFconversion=\toks52
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
@@ -1013,6 +1020,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1042,31 +1050,31 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'praca.bbl' found.
  (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.bbl)
-Package biblatex Info: Reference section=0 on input line 149.
-Package biblatex Info: Reference segment=0 on input line 149.
-\c@lstlisting=\count466
+Package biblatex Info: Reference section=0 on input line 152.
+Package biblatex Info: Reference segment=0 on input line 152.
+\c@lstlisting=\count467
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Trying to load font information for U+msa on input line 149.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 152.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 152.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <agh.jpg, id=4, 146.4672pt x 284.7438pt>
 File: agh.jpg Graphic file (type jpg)
 <use agh.jpg>
-Package pdftex.def Info: agh.jpg  used on input line 151.
+Package pdftex.def Info: agh.jpg  used on input line 154.
 (pdftex.def)             Requested size: 87.88098pt x 170.8476pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 151.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 154.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 151.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 154.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 151.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 154.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/agh.jpg>] [2
@@ -1118,52 +1126,155 @@ Package pdftex.def Info: Graphics/angi.png  used on input line 182.
 
 ]
 Rozdzia\l  2.
-) [15] [16
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
+[15]
+<Graphics/pi.jpg, id=70, 947.54pt x 418.56375pt>
+File: Graphics/pi.jpg Graphic file (type jpg)
+<use Graphics/pi.jpg>
+Package pdftex.def Info: Graphics/pi.jpg  used on input line 24.
+(pdftex.def)             Requested size: 199.16928pt x 87.97762pt.
+
+Underfull \hbox (badness 1270) in paragraph at lines 25--25
+[]\T1/ptm/m/n/9 (a) |Ra-sp-berry Pi Zero w
+ []
+
+<Graphics/Pi_acc.jpg, id=71, 1895.08pt x 890.32625pt>
+File: Graphics/Pi_acc.jpg Graphic file (type jpg)
+<use Graphics/Pi_acc.jpg>
+Package pdftex.def Info: Graphics/Pi_acc.jpg  used on input line 29.
+(pdftex.def)             Requested size: 199.16928pt x 93.56172pt.
+
+Underfull \hbox (badness 1924) in paragraph at lines 30--30
+[]\T1/ptm/m/n/9 (b) |Pªytka z ak-ce-le-ro-me-
+ []
+
+<Graphics/test_device.jpg, id=72, 964.60374pt x 461.725pt>
+File: Graphics/test_device.jpg Graphic file (type jpg)
+<use Graphics/test_device.jpg>
+Package pdftex.def Info: Graphics/test_device.jpg  used on input line 34.
+(pdftex.def)             Requested size: 199.16928pt x 95.33058pt.
+<Graphics/rowerek.png, id=73, 548.0475pt x 328.97906pt>
+File: Graphics/rowerek.png Graphic file (type png)
+<use Graphics/rowerek.png>
+Package pdftex.def Info: Graphics/rowerek.png  used on input line 46.
+(pdftex.def)             Requested size: 227.62204pt x 136.63922pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--63
+
+ []
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
+Underfull \hbox (badness 1210) in paragraph at lines 43--63
+\T1/ptm/m/n/10.95 Rysunek 2.3[] przed-sta-wia za-pis upadku ze stro-mego zbo-cza. Jest to przy-pa-dek gdy ro-we-rzy-sta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--63
+
+ []
+
+[16 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/pi.jpg> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Pi_acc.jpg> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/test_device.jpg> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/rowerek.png>]
+<Graphics/slope_title.png, id=79, 722.7pt x 505.89pt>
+File: Graphics/slope_title.png Graphic file (type png)
+<use Graphics/slope_title.png>
+Package pdftex.def Info: Graphics/slope_title.png  used on input line 67.
+(pdftex.def)             Requested size: 426.79134pt x 298.75812pt.
+<Graphics/Stones_title.png, id=80, 722.7pt x 505.89pt>
+File: Graphics/Stones_title.png Graphic file (type png)
+<use Graphics/Stones_title.png>
+Package pdftex.def Info: Graphics/Stones_title.png  used on input line 72.
+(pdftex.def)             Requested size: 426.79134pt x 298.75812pt.
+<Graphics/Tree_title.png, id=81, 722.7pt x 505.89pt>
+File: Graphics/Tree_title.png Graphic file (type png)
+<use Graphics/Tree_title.png>
+Package pdftex.def Info: Graphics/Tree_title.png  used on input line 78.
+(pdftex.def)             Requested size: 426.79134pt x 298.75812pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/slope_title.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Stones_title.png>]
+<Graphics/All_axis_FSM1.png, id=90, 121.45375pt x 221.82875pt>
+File: Graphics/All_axis_FSM1.png Graphic file (type png)
+<use Graphics/All_axis_FSM1.png>
+Package pdftex.def Info: Graphics/All_axis_FSM1.png  used on input line 94.
+(pdftex.def)             Requested size: 113.81102pt x 207.86914pt.
+<Graphics/overturned_FSM2_3.png, id=91, 174.6525pt x 312.16624pt>
+File: Graphics/overturned_FSM2_3.png Graphic file (type png)
+<use Graphics/overturned_FSM2_3.png>
+Package pdftex.def Info: Graphics/overturned_FSM2_3.png  used on input line 100.
+(pdftex.def)             Requested size: 113.81102pt x 203.42485pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 87--171
+
+ []
+
+
+Underfull \vbox (badness 2401) has occurred while \output is active []
+
+ [19 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Tree_title.png>] [20 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/All_axis_FSM1.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/overturned_FSM2_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu MPU-6050\T1/ptm/m/n/10.95 . https://invensense.tdk.com/wp-
  []
 
 
-Overfull \hbox (27.55188pt too wide) in paragraph at lines 180--180
+Overfull \hbox (27.55188pt too wide) in paragraph at lines 183--183
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu AT-mega328p\T1/ptm/m/n/10.95 . http://www.elenota.pl/datasheetpdf/158353/Atmel/ATMEGA328P. 
  []
 
 
-Overfull \hbox (7.40369pt too wide) in paragraph at lines 180--180
+Overfull \hbox (7.40369pt too wide) in paragraph at lines 183--183
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu STM32F303K8\T1/ptm/m/n/10.95 . https://www.st.com/resource/en/datasheet/stm32f303k8.pdf. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu SIM800L\T1/ptm/m/n/10.95 . https://www.filipeflop.com/img/files/download/Datasheet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []\T1/ptm/m/it/10.95 Dokumentacja ukªadu Be-itian BN-220\T1/ptm/m/n/10.95 . https://files.banggood.com/2016/11/BN-
  []
 
-[17] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
+[21
+
+
+] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29304 strings out of 483075
- 572561 string characters out of 5963833
- 1029033 words of memory out of 5000000
- 43786 multiletter control sequences out of 15000+600000
- 604657 words of font info for 94 fonts, out of 8000000 for 9000
+ 29428 strings out of 483075
+ 574910 string characters out of 5963833
+ 1033797 words of memory out of 5000000
+ 43897 multiletter control sequences out of 15000+600000
+ 607379 words of font info for 96 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
- 60i,11n,60p,1512b,1872s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,60p,1512b,1871s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (17 pages, 608495 bytes).
+Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (21 pages, 1070519 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
