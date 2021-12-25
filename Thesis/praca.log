@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  25 DEC 2021 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  25 DEC 2021 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -941,7 +941,7 @@ Package csquotes Info: Redefining alias 'default' -> 'polish'.
 LaTeX Warning: Unused global option(s):
     [11pt].
 
-(/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
+(/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/testy.aux))
 \openout1 = `praca.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
@@ -1211,70 +1211,140 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/slope_title.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Stones_title.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
+
+ []
+
 <Graphics/All_axis_FSM1.png, id=90, 121.45375pt x 221.82875pt>
 File: Graphics/All_axis_FSM1.png Graphic file (type png)
 <use Graphics/All_axis_FSM1.png>
-Package pdftex.def Info: Graphics/All_axis_FSM1.png  used on input line 94.
+Package pdftex.def Info: Graphics/All_axis_FSM1.png  used on input line 95.
 (pdftex.def)             Requested size: 113.81102pt x 207.86914pt.
 <Graphics/overturned_FSM2_3.png, id=91, 174.6525pt x 312.16624pt>
 File: Graphics/overturned_FSM2_3.png Graphic file (type png)
 <use Graphics/overturned_FSM2_3.png>
-Package pdftex.def Info: Graphics/overturned_FSM2_3.png  used on input line 100.
+Package pdftex.def Info: Graphics/overturned_FSM2_3.png  used on input line 101.
 (pdftex.def)             Requested size: 113.81102pt x 203.42485pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 87--171
 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Tree_title.png>]
+<Graphics/Z_axis_FSM.png, id=97, 203.76125pt x 543.02875pt>
+File: Graphics/Z_axis_FSM.png Graphic file (type png)
+<use Graphics/Z_axis_FSM.png>
+Package pdftex.def Info: Graphics/Z_axis_FSM.png  used on input line 111.
+(pdftex.def)             Requested size: 113.81102pt x 303.30685pt.
+ [20 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/All_axis_FSM1.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/overturned_FSM2_3.png>]
+<Graphics/APP_logic.png, id=103, 292.09125pt x 583.17876pt>
+File: Graphics/APP_logic.png Graphic file (type png)
+<use Graphics/APP_logic.png>
+Package pdftex.def Info: Graphics/APP_logic.png  used on input line 123.
+(pdftex.def)             Requested size: 170.71652pt x 340.86009pt.
+ [21 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Z_axis_FSM.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/APP_logic.png>]
+<Graphics/Recognize_in_code.png, id=112, 279.0425pt x 673.51625pt>
+File: Graphics/Recognize_in_code.png Graphic file (type png)
+<use Graphics/Recognize_in_code.png>
+Package pdftex.def Info: Graphics/Recognize_in_code.png  used on input line 136.
+(pdftex.def)             Requested size: 142.26378pt x 343.38597pt.
+<Graphics/Recognize_in_code_acc.png, id=113, 332.24126pt x 673.51625pt>
+File: Graphics/Recognize_in_code_acc.png Graphic file (type png)
+<use Graphics/Recognize_in_code_acc.png>
+Package pdftex.def Info: Graphics/Recognize_in_code_acc.png  used on input line 141.
+(pdftex.def)             Requested size: 142.26378pt x 288.39365pt.
+<Graphics/recognize_mcu.png, id=114, 1250.6725pt x 963.6pt>
+File: Graphics/recognize_mcu.png Graphic file (type png)
+<use Graphics/recognize_mcu.png>
+Package pdftex.def Info: Graphics/recognize_mcu.png  used on input line 150.
+(pdftex.def)             Requested size: 426.79134pt x 328.82533pt.
+<Graphics/recognize_acc.png, id=115, 1238.6275pt x 932.48375pt>
+File: Graphics/recognize_acc.png Graphic file (type png)
+<use Graphics/recognize_acc.png>
+Package pdftex.def Info: Graphics/recognize_acc.png  used on input line 158.
+(pdftex.def)             Requested size: 426.79134pt x 321.30884pt.
+ [23 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Recognize_in_code.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Recognize_in_code_acc.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/recognize_mcu.png>]
+<Graphics/GPS_NMEA.png, id=125, 169.63374pt x 412.54124pt>
+File: Graphics/GPS_NMEA.png Graphic file (type png)
+<use Graphics/GPS_NMEA.png>
+Package pdftex.def Info: Graphics/GPS_NMEA.png  used on input line 169.
+(pdftex.def)             Requested size: 113.81102pt x 276.77888pt.
 
 
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
- [19 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Tree_title.png>] [20 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/All_axis_FSM1.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/overturned_FSM2_3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]\T1/ptm/m/it/10.95 Dokumentacja ukªadu MPU-6050\T1/ptm/m/n/10.95 . https://invensense.tdk.com/wp-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (27.55188pt too wide) in paragraph at lines 183--183
-[]\T1/ptm/m/it/10.95 Dokumentacja ukªadu AT-mega328p\T1/ptm/m/n/10.95 . http://www.elenota.pl/datasheetpdf/158353/Atmel/ATMEGA328P. 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/recognize_acc.png>]
+<Graphics/LTE.png, id=130, 152.57pt x 342.27875pt>
+File: Graphics/LTE.png Graphic file (type png)
+<use Graphics/LTE.png>
+Package pdftex.def Info: Graphics/LTE.png  used on input line 184.
+(pdftex.def)             Requested size: 113.81102pt x 255.33482pt.
+
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+ [26 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/GPS_NMEA.png>]
+<Graphics/sms.jpg, id=135, 260.172pt x 162.8484pt>
+File: Graphics/sms.jpg Graphic file (type jpg)
+<use Graphics/sms.jpg>
+Package pdftex.def Info: Graphics/sms.jpg  used on input line 197.
+(pdftex.def)             Requested size: 170.71652pt x 106.86154pt.
+<Graphics/maps.jpg, id=136, 813.0375pt x 994.71625pt>
+File: Graphics/maps.jpg Graphic file (type jpg)
+<use Graphics/maps.jpg>
+Package pdftex.def Info: Graphics/maps.jpg  used on input line 203.
+(pdftex.def)             Requested size: 170.71652pt x 208.85104pt.
 
 
-Overfull \hbox (7.40369pt too wide) in paragraph at lines 183--183
-[]\T1/ptm/m/it/10.95 Dokumentacja ukªadu STM32F303K8\T1/ptm/m/n/10.95 . https://www.st.com/resource/en/datasheet/stm32f303k8.pdf. 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [27 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/LTE.png>] [28 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/sms.jpg> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/maps.jpg>]
+\openout2 = `testy.aux'.
+
+ (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/testy.tex
+Rozdzia\l  3.
+<Graphics/connection_with_fix_divided.png, id=144, 1374.13374pt x 507.8975pt>
+File: Graphics/connection_with_fix_divided.png Graphic file (type png)
+<use Graphics/connection_with_fix_divided.png>
+Package pdftex.def Info: Graphics/connection_with_fix_divided.png  used on input line 5.
+(pdftex.def)             Requested size: 455.24408pt x 168.25768pt.
+) [29
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]\T1/ptm/m/it/10.95 Dokumentacja ukªadu SIM800L\T1/ptm/m/n/10.95 . https://www.filipeflop.com/img/files/download/Datasheet-
- []
+
+ </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/connection_with_fix_divided.png>] [30
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]\T1/ptm/m/it/10.95 Dokumentacja ukªadu Be-itian BN-220\T1/ptm/m/n/10.95 . https://files.banggood.com/2016/11/BN-
- []
-
-[21
-
-
-] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux))
+] [31] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/testy.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29428 strings out of 483075
- 574910 string characters out of 5963833
- 1033797 words of memory out of 5000000
- 43897 multiletter control sequences out of 15000+600000
+ 29523 strings out of 483075
+ 577562 string characters out of 5963833
+ 1036610 words of memory out of 5000000
+ 43975 multiletter control sequences out of 15000+600000
  607379 words of font info for 96 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
- 60i,11n,60p,1512b,1871s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (21 pages, 1070519 bytes).
+ 60i,11n,60p,1512b,1924s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (31 pages, 1646482 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 206 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

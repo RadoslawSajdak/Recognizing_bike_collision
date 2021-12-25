@@ -19,43 +19,43 @@
 \datalist[entry]{none/global//global/global}
   \entry{MPU6050}{manual}{}
     \field{labeltitlesource}{title}
-  \field{note}{https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf}
+  \field{howpublished}{\url{https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf}}
     \field{title}{Dokumentacja układu MPU-6050}
   \endentry
 
   \entry{LSM9DS1}{manual}{}
     \field{labeltitlesource}{title}
-    \field{note}{https://www.st.com/resource/en/datasheet/lsm9ds1.pdf}
+  \field{howpublished}{\url{https://www.st.com/resource/en/datasheet/lsm9ds1.pdf}}
     \field{title}{Dokumentacja układu LSM9DS1}
   \endentry
 
   \entry{LSM6DSOX}{manual}{}
     \field{labeltitlesource}{title}
-    \field{note}{https://www.st.com/resource/en/datasheet/lsm6dsox.pdf}
+  \field{howpublished}{\url{https://www.st.com/resource/en/datasheet/lsm6dsox.pdf}}
     \field{title}{Dokumentacja układu LSM6DSOX}
   \endentry
 
   \entry{ATMEGA328P}{manual}{}
     \field{labeltitlesource}{title}
-    \field{note}{http://www.elenota.pl/datasheetpdf/158353/Atmel/ATMEGA328P}
+  \field{howpublished}{\url{http://www.elenota.pl/datasheetpdf/158353/Atmel/ATMEGA328P}}
     \field{title}{Dokumentacja układu ATmega328p}
   \endentry
 
   \entry{STM32F303K8}{manual}{}
     \field{labeltitlesource}{title}
-    \field{note}{https://www.st.com/resource/en/datasheet/stm32f303k8.pdf}
+  \field{howpublished}{\url{https://www.st.com/resource/en/datasheet/stm32f303k8.pdf}}
     \field{title}{Dokumentacja układu STM32F303K8}
   \endentry
 
   \entry{NRF52840}{manual}{}
     \field{labeltitlesource}{title}
-    \field{note}{https://infocenter.nordicsemi.com/pdf/nRF52840-PS-v1.1.pdf}
+  \field{howpublished}{\url{https://infocenter.nordicsemi.com/pdf/nRF52840-PS-v1.1.pdf}}
     \field{title}{Dokumentacja układu nRF52840}
   \endentry
 
   \entry{SIM800L}{manual}{}
     \field{labeltitlesource}{title}
-  \field{note}{https://www.filipeflop.com/img/files/download/Datasheet-SIM800L.pdf}
+  \field{howpublished}{\url{https://www.filipeflop.com/img/files/download/Datasheet-SIM800L.pdf}}
     \field{title}{Dokumentacja układu SIM800L}
   \endentry
 
@@ -66,13 +66,13 @@
 
   \entry{BN220}{manual}{}
     \field{labeltitlesource}{title}
-  \field{note}{https://files.banggood.com/2016/11/BN-22020GPS+Antenna20datasheet.pdf}
+  \field{howpublished}{\url{https://files.banggood.com/2016/11/BN-22020GPS+Antenna20datasheet.pdf}}
     \field{title}{Dokumentacja układu Beitian BN-220}
   \endentry
 
   \entry{MT3339}{manual}{}
     \field{labeltitlesource}{title}
-    \field{note}{https://labs.mediatek.com/en/chipset/MT3339}
+    \field{howpublished}{\url{https://labs.mediatek.com/en/chipset/MT3339}}
     \field{title}{Opis producenta układu MT3339}
   \endentry
 
@@ -81,21 +81,28 @@
     \field{title}{Dokumentacja układu MT3333}
   \endentry
 
-  \entry{ANGI}{unpublished}{}
-    \name{author}{1}{}{%
-      {{hash=S}{%
-         family={Specialized},
-         familyi={S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{S1}
-    \strng{fullhash}{S1}
-    \field{labelnamesource}{author}
+  \entry{ANGI}{manual}{}
     \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.specialized.com/pl/pl/stories/angi}}
     \field{title}{Strona producenta rozwiązania ANGI}
-    \verb{url}
-    \verb https://www.specialized.com/pl/pl/stories/angi
-    \endverb
+  \endentry
+
+  \entry{otii}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.qoitech.com/}}
+    \field{title}{Strona producenta Otii}
+  \endentry
+
+  \entry{unico}{manual}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://www.st.com/en/development-tools/unico-gui.html}}
+    \field{title}{Program Unico-GUI}
+  \endentry
+
+  \entry{lsm6dsoxappnote}{manual}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://www.st.com/resource/en/application_note/dm00572971-lsm6dsox-finite-state-machine-stmicroelectronics.pdf}}
+    \field{title}{Nota aplikacyjna maszyn stanów układu LSM6DSOX}
   \endentry
 \enddatalist
 \endinput
