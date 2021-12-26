@@ -88,7 +88,7 @@ Pierwsza z maszyn stanów, służy wykryciu znaczących przeciążeń na dowolne
 \newline
 \newline
 \subsubsection{Maszyna stanów wykrywająca przewrócony rower}
-Dwie kolejne maszyny stanów, przedstawione na diagramie \ref{img:fsm2}, to algorytmy wykrywające przewrócenie roweru. Podczas analizy danych zauważono, że każdy wypadek, kończył się przechyleniem roweru na jeden z boków. Z tego powodu, zaimplementowano licznik, który co 2 sekundy próbkuje wartość na osi Y i sprawdza, czy nie przekracza ona wartości bezwzględnej 0.6g. Jeśli przez dwie minuty, rower nie wróci do pozycji jazdy, wyzwolony zostaje alarm. W praktyce, opisana maszyna musiała zostać zaimplementowana w akcelerometrze jako dwie, niezależne, z uwagi na brak funkcji wartości bezwzględnej w układzie.
+Dwie kolejne maszyny stanów, przedstawione na diagramie \ref{img:fsm2}, to algorytmy wykrywające przewrócenie roweru. Podczas analizy danych zauważono, że każdy wypadek, kończył się przechyleniem roweru na jeden z boków. Z tego powodu, zaimplementowano licznik, który co 2 sekundy próbkuje wartość na osi Y i sprawdza, czy przekroczyła ona wartość bezwzględną 0.6g. Jeśli przez dwie minuty, rower nie wróci do pozycji jazdy, wyzwolony zostaje alarm. W praktyce, opisana maszyna musiała zostać zaimplementowana w akcelerometrze jako dwie, niezależne, z uwagi na brak funkcji wartości bezwzględnej w układzie.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{5cm}
