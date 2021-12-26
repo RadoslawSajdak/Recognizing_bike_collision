@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  26 DEC 2021 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  26 DEC 2021 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1111,13 +1111,13 @@ Underfull \vbox (badness 1552) has occurred while \output is active []
 <Graphics/PCB.png, id=58, 243.0681pt x 147.9126pt>
 File: Graphics/PCB.png Graphic file (type png)
 <use Graphics/PCB.png>
-Package pdftex.def Info: Graphics/PCB.png  used on input line 186.
+Package pdftex.def Info: Graphics/PCB.png  used on input line 183.
 (pdftex.def)             Requested size: 199.16928pt x 121.20108pt.
  [13]
 <Graphics/angi.png, id=64, 2509.375pt x 1411.2725pt>
 File: Graphics/angi.png Graphic file (type png)
 <use Graphics/angi.png>
-Package pdftex.def Info: Graphics/angi.png  used on input line 193.
+Package pdftex.def Info: Graphics/angi.png  used on input line 190.
 (pdftex.def)             Requested size: 199.16928pt x 111.99966pt.
 ) [14 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/PCB.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/angi.png>]
 \openout2 = `prototyp.aux'.
@@ -1125,7 +1125,7 @@ Package pdftex.def Info: Graphics/angi.png  used on input line 193.
  (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.tex
 Rozdzia\l  2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
@@ -1137,55 +1137,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--11
 <Graphics/pi.jpg, id=73, 947.54pt x 418.56375pt>
 File: Graphics/pi.jpg Graphic file (type jpg)
 <use Graphics/pi.jpg>
-Package pdftex.def Info: Graphics/pi.jpg  used on input line 24.
+Package pdftex.def Info: Graphics/pi.jpg  used on input line 23.
 (pdftex.def)             Requested size: 199.16928pt x 87.97762pt.
 
-Underfull \hbox (badness 1270) in paragraph at lines 25--25
+Underfull \hbox (badness 1270) in paragraph at lines 24--24
 []\T1/ptm/m/n/9 (a) |Ra-sp-berry Pi Zero w
  []
 
 <Graphics/Pi_acc.jpg, id=74, 1895.08pt x 890.32625pt>
 File: Graphics/Pi_acc.jpg Graphic file (type jpg)
 <use Graphics/Pi_acc.jpg>
-Package pdftex.def Info: Graphics/Pi_acc.jpg  used on input line 29.
+Package pdftex.def Info: Graphics/Pi_acc.jpg  used on input line 28.
 (pdftex.def)             Requested size: 199.16928pt x 93.56172pt.
 
-Underfull \hbox (badness 1924) in paragraph at lines 30--30
+Underfull \hbox (badness 1924) in paragraph at lines 29--29
 []\T1/ptm/m/n/9 (b) |Pªytka z ak-ce-le-ro-me-
  []
 
 <Graphics/test_device.jpg, id=75, 964.60374pt x 461.725pt>
 File: Graphics/test_device.jpg Graphic file (type jpg)
 <use Graphics/test_device.jpg>
-Package pdftex.def Info: Graphics/test_device.jpg  used on input line 34.
+Package pdftex.def Info: Graphics/test_device.jpg  used on input line 33.
 (pdftex.def)             Requested size: 199.16928pt x 95.33058pt.
 <Graphics/rowerek.png, id=76, 548.0475pt x 328.97906pt>
 File: Graphics/rowerek.png Graphic file (type png)
 <use Graphics/rowerek.png>
-Package pdftex.def Info: Graphics/rowerek.png  used on input line 46.
+Package pdftex.def Info: Graphics/rowerek.png  used on input line 45.
 (pdftex.def)             Requested size: 227.62204pt x 136.63922pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--63
+Underfull \hbox (badness 10000) in paragraph at lines 42--62
 
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 43--63
+Underfull \hbox (badness 1210) in paragraph at lines 42--62
 \T1/ptm/m/n/10.95 Rysunek 2.3[] przed-sta-wia za-pis upadku ze stro-mego zbo-cza. Jest to przy-pa-dek gdy ro-we-rzy-sta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--63
+Underfull \hbox (badness 10000) in paragraph at lines 42--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--63
+Underfull \hbox (badness 10000) in paragraph at lines 42--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--63
+Underfull \hbox (badness 10000) in paragraph at lines 42--62
 
  []
 
@@ -1193,17 +1193,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--63
 <Graphics/slope_title.png, id=81, 722.7pt x 505.89pt>
 File: Graphics/slope_title.png Graphic file (type png)
 <use Graphics/slope_title.png>
-Package pdftex.def Info: Graphics/slope_title.png  used on input line 67.
+Package pdftex.def Info: Graphics/slope_title.png  used on input line 66.
 (pdftex.def)             Requested size: 426.79134pt x 298.75812pt.
 <Graphics/Stones_title.png, id=82, 722.7pt x 505.89pt>
 File: Graphics/Stones_title.png Graphic file (type png)
 <use Graphics/Stones_title.png>
-Package pdftex.def Info: Graphics/Stones_title.png  used on input line 72.
+Package pdftex.def Info: Graphics/Stones_title.png  used on input line 71.
 (pdftex.def)             Requested size: 426.79134pt x 298.75812pt.
 <Graphics/Tree_title.png, id=83, 722.7pt x 505.89pt>
 File: Graphics/Tree_title.png Graphic file (type png)
 <use Graphics/Tree_title.png>
-Package pdftex.def Info: Graphics/Tree_title.png  used on input line 78.
+Package pdftex.def Info: Graphics/Tree_title.png  used on input line 77.
 (pdftex.def)             Requested size: 426.79134pt x 298.75812pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1213,24 +1213,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/slope_title.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Stones_title.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
  []
 
 <Graphics/All_axis_FSM1.png, id=92, 141.52875pt x 221.82875pt>
 File: Graphics/All_axis_FSM1.png Graphic file (type png)
 <use Graphics/All_axis_FSM1.png>
-Package pdftex.def Info: Graphics/All_axis_FSM1.png  used on input line 96.
+Package pdftex.def Info: Graphics/All_axis_FSM1.png  used on input line 95.
 (pdftex.def)             Requested size: 99.58464pt x 156.0914pt.
 <Graphics/overturned_FSM2_3.png, id=93, 174.6525pt x 312.16624pt>
 File: Graphics/overturned_FSM2_3.png Graphic file (type png)
 <use Graphics/overturned_FSM2_3.png>
-Package pdftex.def Info: Graphics/overturned_FSM2_3.png  used on input line 103.
+Package pdftex.def Info: Graphics/overturned_FSM2_3.png  used on input line 102.
 (pdftex.def)             Requested size: 113.81102pt x 203.42485pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1239,7 +1239,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Graphics/Z_axis_FSM.png, id=99, 203.76125pt x 543.02875pt>
 File: Graphics/Z_axis_FSM.png Graphic file (type png)
 <use Graphics/Z_axis_FSM.png>
-Package pdftex.def Info: Graphics/Z_axis_FSM.png  used on input line 113.
+Package pdftex.def Info: Graphics/Z_axis_FSM.png  used on input line 112.
 (pdftex.def)             Requested size: 113.81102pt x 303.30685pt.
 
 
@@ -1248,7 +1248,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Graphics/APP_logic.png, id=100, 292.09125pt x 583.17876pt>
 File: Graphics/APP_logic.png Graphic file (type png)
 <use Graphics/APP_logic.png>
-Package pdftex.def Info: Graphics/APP_logic.png  used on input line 125.
+Package pdftex.def Info: Graphics/APP_logic.png  used on input line 124.
 (pdftex.def)             Requested size: 170.71652pt x 340.86009pt.
 [20 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/All_axis_FSM1.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/overturned_FSM2_3.png>]
 
@@ -1261,12 +1261,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Graphics/Recognize_in_code.png, id=110, 279.0425pt x 673.51625pt>
 File: Graphics/Recognize_in_code.png Graphic file (type png)
 <use Graphics/Recognize_in_code.png>
-Package pdftex.def Info: Graphics/Recognize_in_code.png  used on input line 139.
+Package pdftex.def Info: Graphics/Recognize_in_code.png  used on input line 138.
 (pdftex.def)             Requested size: 142.26378pt x 343.38597pt.
 <Graphics/Recognize_in_code_acc.png, id=111, 332.24126pt x 673.51625pt>
 File: Graphics/Recognize_in_code_acc.png Graphic file (type png)
 <use Graphics/Recognize_in_code_acc.png>
-Package pdftex.def Info: Graphics/Recognize_in_code_acc.png  used on input line 145.
+Package pdftex.def Info: Graphics/Recognize_in_code_acc.png  used on input line 144.
 (pdftex.def)             Requested size: 142.26378pt x 288.39365pt.
 
 
@@ -1275,12 +1275,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Graphics/recognize_mcu.png, id=112, 1250.6725pt x 963.6pt>
 File: Graphics/recognize_mcu.png Graphic file (type png)
 <use Graphics/recognize_mcu.png>
-Package pdftex.def Info: Graphics/recognize_mcu.png  used on input line 154.
+Package pdftex.def Info: Graphics/recognize_mcu.png  used on input line 153.
 (pdftex.def)             Requested size: 426.79134pt x 328.82533pt.
 <Graphics/recognize_acc.png, id=113, 1238.6275pt x 932.48375pt>
 File: Graphics/recognize_acc.png Graphic file (type png)
 <use Graphics/recognize_acc.png>
-Package pdftex.def Info: Graphics/recognize_acc.png  used on input line 162.
+Package pdftex.def Info: Graphics/recognize_acc.png  used on input line 161.
 (pdftex.def)             Requested size: 426.79134pt x 321.30884pt.
 [22 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/APP_logic.png>]
 
@@ -1296,7 +1296,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Graphics/GPS_NMEA.png, id=124, 169.63374pt x 412.54124pt>
 File: Graphics/GPS_NMEA.png Graphic file (type png)
 <use Graphics/GPS_NMEA.png>
-Package pdftex.def Info: Graphics/GPS_NMEA.png  used on input line 173.
+Package pdftex.def Info: Graphics/GPS_NMEA.png  used on input line 172.
 (pdftex.def)             Requested size: 113.81102pt x 276.77888pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1308,7 +1308,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Graphics/LTE.png, id=128, 152.57pt x 342.27875pt>
 File: Graphics/LTE.png Graphic file (type png)
 <use Graphics/LTE.png>
-Package pdftex.def Info: Graphics/LTE.png  used on input line 188.
+Package pdftex.def Info: Graphics/LTE.png  used on input line 187.
 (pdftex.def)             Requested size: 113.81102pt x 255.33482pt.
 [25 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/recognize_acc.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1317,12 +1317,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Graphics/sms.jpg, id=137, 260.172pt x 153.6942pt>
 File: Graphics/sms.jpg Graphic file (type jpg)
 <use Graphics/sms.jpg>
-Package pdftex.def Info: Graphics/sms.jpg  used on input line 201.
+Package pdftex.def Info: Graphics/sms.jpg  used on input line 200.
 (pdftex.def)             Requested size: 170.71652pt x 100.8545pt.
 <Graphics/maps.jpg, id=138, 1084.05pt x 1361.085pt>
 File: Graphics/maps.jpg Graphic file (type jpg)
 <use Graphics/maps.jpg>
-Package pdftex.def Info: Graphics/maps.jpg  used on input line 207.
+Package pdftex.def Info: Graphics/maps.jpg  used on input line 206.
 (pdftex.def)             Requested size: 170.71652pt x 214.33049pt.
 ) [27 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/LTE.png>] [28 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/sms.jpg> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/maps.jpg>]
 \openout2 = `testy.aux'.
@@ -1397,7 +1397,7 @@ Here is how much of TeX's memory you used:
  79 hyphenation exceptions out of 8191
  60i,11n,60p,2210b,1871s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (37 pages, 3097012 bytes).
+Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (37 pages, 3096541 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  135 compressed objects within 2 object streams
