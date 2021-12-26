@@ -7,11 +7,12 @@ Obecny rozwój mikroprocesorów, pozwala na tworzenie coraz bardziej złożonych
 
 \section{Cele pracy}
 \label{sec:celePracy}
-
+Temat bezpieczeństwa rowerzystów, jest tematem wielokrotnie podnoszonym w mediach oraz badaniach. W lipcu 2021, opublikowany został artykuł, z którego wynika, że statystycznie aż 50\% wypadków na rowerze, kończyło się wykonaniem zabiegu na poszkodowanym. Dodatkowo, 2\% wypadków wymagało transportu rannej osoby.\cite{collisions}
 Rowerzyści górscy, podczas samotnych wypraw rowerowych, wielokrotnie zastanawiają się, co w sytuacji, gdy ulegną wypadkowi podczas samotnej wyprawy?
 Jak długo nikt nie wezwie pomocy? W ten sposób, powstał pomysł stworzenia urządzenia asystującego.
 \newline
-Celem pracy było stworzenie innowacyjnego urządzenia wykrywającego upadek na rowerze. Urządzenie miało być przymocowane do ramy roweru. Urządzenie, informację o wypadku wysyła przy użyciu modemu LTE-M opartego o interfejs szeregowy UART. Za lokalizowanie urządzenia, odpowiadać będzie moduł GPS oparty o magistralę $I^{2}C$. Całość, sterowana będzie przy użyciu mikrokontrolera.
+Celem pracy było stworzenie innowacyjnego urządzenia wykrywającego upadek na rowerze. Urządzenie miało być przymocowane do ramy roweru. Urządzenie, informację o wypadku wysyła przy użyciu modemu LTE-M opartego o interfejs szeregowy UART. Za lokalizowanie urządzenia, odpowiadać będzie moduł GPS oparty o magistralę $I^{2}C$. Całość, sterowana będzie przy użyciu mikrokontrolera. W prototypie, zdecydowano się na użycie akcelerometru. Są one powszechnie stosowane w rozwiązaniach związanych z rozpoznawaniem gestów. Przykład rozwiązania opartego na akcelerometrze, opaisano w artykule pt. ,,MOCA: A Low-Power, Low-Cost Motion Capture System
+Based on Integrated Accelerometers''.\cite{moca_acc} Artykuł, wskazuje
 
 \section{Analiza wymagań technicznych i dobór komponentów}
 \label{sec:technical_analysis}

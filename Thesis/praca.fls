@@ -508,6 +508,9 @@ INPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/perspektywy.tex
 OUTPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.aux
 INPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.tex
 INPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmrc8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux
 INPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux
 INPUT /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux

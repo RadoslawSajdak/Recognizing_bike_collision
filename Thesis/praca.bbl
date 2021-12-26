@@ -17,6 +17,115 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{collisions}{article}{}
+    \name{author}{8}{}{%
+      {{hash=SE}{%
+         family={Spörri},
+         familyi={S\bibinitperiod},
+         given={Emilian},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Halvachizadeh},
+         familyi={H\bibinitperiod},
+         given={Sascha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Gamble},
+         familyi={G\bibinitperiod},
+         given={Jamison},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=AF}{%
+         family={Allemann},
+         familyi={A\bibinitperiod},
+         given={Florin},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=PH}{%
+         family={Pape},
+         familyi={P\bibinitperiod},
+         given={Hans},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RT}{%
+         family={Rauer},
+         familyi={R\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pfeifer},
+         familyi={P\bibinitperiod},
+         given={Roman},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Herr},
+         familyi={H\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SE+1}
+    \strng{fullhash}{SEHSGJAFPHRTPRHD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3390/jcm10153359
+    \endverb
+    \field{pages}{3359}
+    \field{title}{Comparison of Injury Patterns between Electric Bicycle,
+  Bicycle and Motorcycle Accidents}
+    \field{volume}{2021}
+    \field{journaltitle}{Journal of Clinical Medicine}
+    \field{month}{07}
+    \field{year}{2021}
+  \endentry
+
+  \entry{moca_acc}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FE}{%
+         family={Farella},
+         familyi={F\bibinitperiod},
+         given={Elisabetta},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Benini},
+         familyi={B\bibinitperiod},
+         given={Luca},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Riccò},
+         familyi={R\bibinitperiod},
+         given={Bruno},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Acquaviva},
+         familyi={A\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FE+1}
+    \strng{fullhash}{FEBLRBAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1155/2007/82638
+    \endverb
+    \field{title}{MOCA: A Low-Power, Low-Cost Motion Capture System Based on
+  Integrated Accelerometers}
+    \field{volume}{2007}
+    \field{journaltitle}{Advances in Multimedia}
+    \field{month}{05}
+    \field{year}{2007}
+  \endentry
+
   \entry{MPU6050}{manual}{}
     \field{labeltitlesource}{title}
   \field{howpublished}{\url{https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf}}
