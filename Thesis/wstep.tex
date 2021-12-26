@@ -14,7 +14,7 @@ Jak długo nikt nie wezwie pomocy? W ten sposób, powstał pomysł stworzenia ur
 Celem pracy było stworzenie innowacyjnego urządzenia wykrywającego upadek na rowerze. Urządzenie miało być przymocowane do ramy roweru. Urządzenie, informację o wypadku wysyła przy użyciu modemu LTE-M opartego o interfejs szeregowy UART. Za lokalizowanie urządzenia, odpowiadać będzie moduł GPS oparty o magistralę $I^{2}C$. Całość, sterowana będzie przy użyciu mikrokontrolera.
 
 \section{Analiza wymagań technicznych i dobór komponentów}
-
+\label{sec:technical_analysis}
 Docelowo, urządzenie miało zwiększać bezpieczeństwo podczas wypraw rowerowych. Musiało więc być bardzo energooszczędne. Minimalne wymaganie, to 24 godziny pracy na jednym ładowaniu baterii. Jednocześnie, nie może być zbyt duże, aby w łatwy sposób można było zamontować je na rowerze. Pobierana lokalizacja, miała mieć dokładność około 100m. Jest to dokładność wystarczająca, aby zobaczyć ranną osobę, leżący rower, lub usłyszeć wołanie o pomoc. Ważnym było, aby urządzenie, było w pełni niezależne od innych układów, jak np. telefon.
 \newline
 Planując pracę, zdecydowano się wykorzystać trzy moduły:
@@ -176,10 +176,20 @@ Pomimo, że układ MT3339 cechuje się najmniejszym zużyciem energii oraz posia
     \label{tab:gps}
     \end{table}
 
+
+\section{Podsumowanie wyboru sprzętu}
+Rozważane w sekcji \ref{sec:technical_analysis} komponenty, zostały dobrane przede wszystkim ze względu na niskie zużycie energii. Każdy z wybranych komponentów, testowany był przy użyciu płytek rozwojowych, dostępnych w sklepach. Dodatkowo, taki wybór komponentów, pozwolił skorzystać z gotowej płytki PCB, stosowanej w jednym z dostępnych na rynku urządzeń. Zmiana oprogramowania urządzenia, przy użyciu programatora J-link, pozwoliła zupełnie zmienić jego zastosowanie. Takie podejście, umożliwiło rownież stworzenie prototypu urządzenia, które rozwijane może trafić na rynek, bez kosztownego projektowania nowych płytek PCB. (rys. \ref{img:pcb})
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=7cm]{Graphics/PCB.png}
+    \caption{Wykorzystana płytka PCB z urządzenia dostępnego na rynku}
+    \label{img:pcb}
+\end{figure}
 \section{Podobne rozwiązania obecne na rynku}
 Podobne rozwiązanie, zaproponowała firma Specialized. Inżynierowie stworzyli urządzenie o nazwie ANGI, widoczne na rysunku \ref{img:angi_img}. Jest to mały układ, wyposażony w akcelerometr i żyroskop. Komunikuje się on przy użyciu Bluetooth z ich autorską aplikacją na telefon z iOS lub Androidem. Urządzenie, zamontowane na kask, wysyła powiadomienie do aplikacji, gdy rowerzysta uderza kaskiem w przeszkodę. Rozwiązanie to, ma szereg zalet, takich jak prostota budowy i bardzo niskie zużycie energii. Jest ono jednak uzależnione od telefonu, który w przypadku wycieczek górskich, czasem wygodniej zostawić w domu.
 \begin{figure}[h]
-\includegraphics[width=4cm]{Graphics/angi.png}
+\includegraphics[width=7cm]{Graphics/angi.png}
 \centering
 \caption{Urządzenie ANGI, stworzone przez firmę Specialized.\cite{ANGI}}
 \centering

@@ -23,7 +23,8 @@
 \contentsline {subsubsection}{\numberline {1.2.4.2}Mediatek MT3339}{12}%
 \contentsline {subsubsection}{\numberline {1.2.4.3}Mediatek MT3333}{13}%
 \contentsline {subsubsection}{\numberline {1.2.4.4}Wybór modułu GPS}{13}%
-\contentsline {section}{\numberline {1.3}Podobne rozwiązania obecne na rynku}{13}%
+\contentsline {section}{\numberline {1.3}Podsumowanie wyboru sprzętu}{13}%
+\contentsline {section}{\numberline {1.4}Podobne rozwiązania obecne na rynku}{13}%
 \contentsline {chapter}{\numberline {2}Prototyp urządzenia}{15}%
 \contentsline {section}{\numberline {2.1}Opracowanie algorytmu wykrywania kolizji}{15}%
 \contentsline {subsection}{\numberline {2.1.1}Analiza zebranych danych }{16}%
