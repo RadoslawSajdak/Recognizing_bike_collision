@@ -58,9 +58,11 @@ for axis, n, tit, y_l, x_l in zip(raw_data[3:], range(len(raw_data[3:])), titles
     filtered_data.append(butter_lowpass_filter(axis[CUT_FRONT:], cutoff, fs, order))
     t = np.arange(len(axis[CUT_FRONT:]))/416
     plt.subplot(3,1,n + 1)
-    plt.plot(t, filtered_data[n])
+    plt.plot(t, axis[CUT_FRONT:])
     plt.ylabel(y_l)
     plt.xlabel(x_l)
+    sec = plt.twinx()
+    sec.plot(t,filtered_data[n],color='red')
     plt.tight_layout()
     plt.title(tit)
     

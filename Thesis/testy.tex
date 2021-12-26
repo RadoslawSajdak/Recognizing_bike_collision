@@ -13,4 +13,30 @@ Rysunek \ref{img:current_summary} przedstawia kompletną analizę poboru prądu 
 \end{figure}
 
 \section{Testy algorytmów}
-Przyłożyć maszyny stanów do przebiegów i pokazać, że to się pokrywa
+Ze względów bezpieczeństwa, maszyny stanów przetestowane zostały poprzez potrząsanie układem w sposób, mający wyzwolić kolejne maszyny. Pierwsza z nich, testująca przekroczenie wartości, wyzwalała się poprawnie. Należy zauważyć, że maszyna testuje sygnał nieprzefiltrowany, porównany na rysunku \ref{img:signal_comparsion}. Wykres niebieski, przedstawia zaszumiony sygnał. widać jednak na nim, że w momencie wypadku, pojedyncze próbki sięgają wartości $\pm$7g. Po filtracji, wykres czerwony jest znacznie bardziej czytelny, jednak nie występują w nim tak duże wartości przyspieszenia.
+\newline
+Kolejna z maszyn stanów, wykrywająca przewrócenie roweru, zadziałała w każdym z przypadków. Na rysunku \ref{img:fsm3_recognize} zaznaczono krótki fragment, prowadzący do wyzwolenia maszyny stanów. Ponieważ rower po wypadku, przewrócony był na jeden bok, wartość przyspieszenia w osi Y osiągnęła stałą wartość bliską -1g. Po dwóch minutach w niezminionej pozycji, rower uznany został za przewrócony, co skutkowało przerwaniem i alarmem.
+\newline
+Ostatnia maszyna stanów, odpowiedzialna za wykrycie uderzenia  i przewrotu również działała poprawnie. Na rysunku \ref{img:fsm4_recognize} kolejne punkty zaznaczają momenty przejścia przez etapy maszyny stanów. Dla czytelności, na przebiegu przedstawiono sygnał przefiltrowany, jednak maszyna stanów, pracując na surowych danych, wykrywa wartości znacznie większe od przefiltrowanych. W jej przypadku, istotna jest zmiana znaku przyspieszenia, w stosunkowo niedużym czasie.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{Graphics/Before_and_after_filter.png}
+    \caption{Porównanie sygnału surowego do sygnału po filtracji}
+    \label{img:signal_comparsion}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{Graphics/Tree_title_to_fsm.png}
+    \caption{Wyzwolenie maszyny stanów, wykrywającej leżący rower}
+    \label{img:fsm3_recognize}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{Graphics/Stones_title_to_fsm.png}
+    \caption{Wyzwolenie maszyny stanów, wykrywająca uderzenie i przewrót}
+    \label{img:fsm4_recognize}
+\end{figure}

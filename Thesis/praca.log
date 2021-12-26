@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  25 DEC 2021 23:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.23)  26 DEC 2021 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,49 +1335,70 @@ Package pdftex.def Info: Graphics/connection_with_fix_divided.png  used on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [29
+[29
 
 
 
-] [30 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/connection_with_fix_divided.png>]
+]
+<Graphics/Before_and_after_filter.png, id=148, 1387.584pt x 752.3307pt>
+File: Graphics/Before_and_after_filter.png Graphic file (type png)
+<use Graphics/Before_and_after_filter.png>
+Package pdftex.def Info: Graphics/Before_and_after_filter.png  used on input line 25.
+(pdftex.def)             Requested size: 455.24408pt x 246.82346pt.
+<Graphics/Tree_title_to_fsm.png, id=149, 1011.78pt x 505.89pt>
+File: Graphics/Tree_title_to_fsm.png Graphic file (type png)
+<use Graphics/Tree_title_to_fsm.png>
+Package pdftex.def Info: Graphics/Tree_title_to_fsm.png  used on input line 32.
+(pdftex.def)             Requested size: 455.24408pt x 227.62523pt.
+ [30 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/connection_with_fix_divided.png> </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Before_and_after_filter.png>]
+<Graphics/Stones_title_to_fsm.png, id=155, 1011.78pt x 505.89pt>
+File: Graphics/Stones_title_to_fsm.png Graphic file (type png)
+<use Graphics/Stones_title_to_fsm.png>
+Package pdftex.def Info: Graphics/Stones_title_to_fsm.png  used on input line 39.
+(pdftex.def)             Requested size: 455.24408pt x 227.62523pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [31 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Tree_title_to_fsm.png>] [32 </home/roiz/Codes/found/Recognizing_bike_collision/Thesis/Graphics/Stones_title_to_fsm.png>]
 \openout2 = `perspektywy.aux'.
 
  (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/perspektywy.tex
 Rozdzia\l  4.
-) [31
+) [33
 
 
 
 ]
 \openout2 = `podsumowanie.aux'.
 
- (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.tex [32
+ (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.tex [34
 
 
 
 ]
 Rozdzia\l  5.
-) [33] [34
+) [35] [36
 
 
-] [35] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/testy.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/perspektywy.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.aux))
+] [37] (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.aux (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/wstep.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/prototyp.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/testy.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/perspektywy.aux) (/home/roiz/Codes/found/Recognizing_bike_collision/Thesis/podsumowanie.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29548 strings out of 483075
- 578678 string characters out of 5963833
- 1041666 words of memory out of 5000000
- 43986 multiletter control sequences out of 15000+600000
+ 29569 strings out of 483075
+ 579359 string characters out of 5963833
+ 1041699 words of memory out of 5000000
+ 44004 multiletter control sequences out of 15000+600000
  607379 words of font info for 96 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
  60i,11n,60p,2210b,1871s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (35 pages, 1655321 bytes).
+Output written on /home/roiz/Codes/found/Recognizing_bike_collision/Thesis/praca.pdf (37 pages, 1936605 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 233 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
