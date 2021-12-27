@@ -53,6 +53,7 @@ static bool                     g_send_periodically = false;
 static bool                     g_device_running = false; // false = stopped, true = running
 static bool                     g_timer_started = false;
 static bool                     g_long_timer_up = false;
+static bool                     g_have_fix = false;
 
 void clear_flags(void);
 
@@ -169,10 +170,14 @@ void main(void)
             }
             else if( g_event_interrupted || (g_send_periodically && g_long_timer_up))
             {
-                tk_gps_get_data(true); // Leave GPS on to hold fix
-                while( !tk_gps_get_data_ready()  && !g_button_events.long_press && !g_button_events.short_press) 
+                if(!g_have_fix)
                 {
-                    k_msleep(100);
+                    tk_gps_get_data(false); // Leave GPS on to hold fix
+                    while( !tk_gps_get_data_ready()  && !g_button_events.long_press && !g_button_events.short_press) 
+                    {
+                        k_msleep(100);
+                    }
+                    g_have_fix = true;
                 }
                 if(!g_button_events.short_press && !g_button_events.long_press) 
                 {
@@ -196,6 +201,7 @@ void clear_flags(void)
     g_send_periodically = false;
     g_event_interrupted = false;
     g_timer_started = false;
+    g_have_fix = false;
     k_timer_stop(&g_periodically_timer);
     k_timer_stop(&g_accel_timer);
     tk_accel_clear_event_status();
