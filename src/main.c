@@ -77,6 +77,18 @@ void main(void)
     #ifdef COMPONENT_TK_GASGAUGE
     if( tk_success != tk_gas_initialize() ) LOG_ERR("Can't initate gasgauge");
     #endif
+
+    int errno_var;
+    /*----- Buzzer -----*/
+    LOG_DBG("tRYING TO BUZZ");
+    #ifdef  COMPONENT_TK_BUZZER
+    if( 0 != (errno_var = tk_buzzer_init())) LOG_INF("Buzzer Init fail %d", errno_var);
+    tk_buzzer_set_volume(tk_buzzer_vol_high);
+    if( 0 == tk_buzzer_play_melody(0,35,1)) LOG_INF("Melody Done");
+    LOG_INF("Buzzer func is done!");
+    #endif
+
+
     #ifdef COMPONENT_PB_SERVICE
     if (app_pb_ble_service_init() == 0)
     {
@@ -87,19 +99,12 @@ void main(void)
     #endif
     /*----- Power management -----*/
     pm_init();
-
+ 
     #ifdef  COMPONENT_TK_LTE
     tk_lte_init_setup();
     #endif
 
-    /*----- Buzzer -----*/
-    #ifdef  COMPONENT_TK_BUZZER
-    if( 0 == tk_buzzer_init()) LOG_INF("Buzzer Init success");
-    tk_buzzer_set_volume(tk_buzzer_vol_high);
-    if( 0 == tk_buzzer_play_melody(0,34,1)) LOG_INF("Melody Done");
-    tk_buzzer_set_volume(tk_buzzer_vol_mute);
-    LOG_INF("Buzzer func is done!");
-    #endif
+    
 
     /*----- GPS -----*/
     #ifdef  COMPONENT_TK_GPS
@@ -119,6 +124,7 @@ void main(void)
     g_device_running = true;
     while (1)
     {
+        LOG_DBG("XD");
         if(g_button_events.long_press) //Switch device state
         {
             LOG_DBG("Long press");
@@ -126,6 +132,7 @@ void main(void)
             {
                 LOG_DBG("Turning off");
                 // TODO: Buzzer off
+                tk_buzzer_loud_beep(false);
                 clear_flags();
                 tk_gps_power(false);
                 tk_lte_reset();
@@ -147,7 +154,7 @@ void main(void)
             if(g_device_running)
             {
                 clear_flags();
-                // TODO: Buzzer off
+                tk_buzzer_loud_beep(false);
                 tk_gps_power(false);
                 tk_lte_reset();
                 tk_lte_power_off();
@@ -166,7 +173,7 @@ void main(void)
                 tk_accel_clear_event_status();
                 g_timer_started = true;
                 k_timer_start(&g_accel_timer, K_SECONDS(ALARM_STOP_TIMEOUT_SEC), K_NO_WAIT);
-                // TODO: Buzzer on
+                tk_buzzer_loud_beep(true);
             }
             else if( g_event_interrupted || (g_send_periodically && g_long_timer_up))
             {
